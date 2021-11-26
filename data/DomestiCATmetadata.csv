@@ -1,0 +1,96 @@
+Location,Extraction ID,CatID,Cat sample ID,Age,Arrival,Sampling date,Tame/Feral,Sex,Bites?,Hisses?,Retreats?,Quiet,Loud,Tolerant,Requires sedating,Healthy,Dry skin,Stiff,Agile,Clear eyes,Sick/injured,Coat condition,Received food at shelter,Other,INDEX,Forward,Reverse,KoppenClimateType,Climate,Industrialization,Urbanization
+Aruba,AR1,ARD1,56,Unknown,Unknown,16.03.18,Tame,Male,,,,x,,,,x,,,,x,,Healthy,,59,1,AACTGTGC,AACTGTGG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR10,ARD10,104645,1.5 years,10.04.18,10.04.18,Tame,Male,,,,x,,,,x,,,,,,,,,2,TCGTACAG,TCGTACAG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR13,ARD13,12,1 year,08.03.18,08.03.18,Tame,Female,,,x,x,,x,,x,,,,x,,,,wounded,3,CTCACTGC,CTCACTGG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR16,ARF16,104146,Unknown,20.03.18,20.03.18,Feral,Female,,,x,x,,,,,,,,,,Matted,,Fleas,4,GTGCTACT,GTGCTACT,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR21,ARD21,78,Unknown,19.03.18,19.03.18,Tame,Male,,,,,,x,,x,,,,x,,Healthy,,,5,GCTTGACC,GCTTGACG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR24,ARD24,9297,6 months,28.03.18,27.03.18,Tame,Female,,,,x,,x,,x,,,,x,,Healthy,,,6,CATCATCT,CATCATCT,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR31,ARF31,58,Unknown,Unknown,Unknown,Feral,Female,,,x,x,,x,,x,,,,x,,,,,7,TGCTACTC,TGCTACTG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR33,ARD33,34,Unknown,09.03.18,09.03.18,Tame,Female,,,x,,,x,,x,,,,x,,,,,8,AGAAGTGT,AGAAGTGT,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR40,ARF40,2748,1 year,Unknown,02.05.18,Feral,Female,,,,x,,x,,x,,,,x,,Healthy,,,9,AGTGTCAC,AGTGTCAG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR43,ARF43,99623,1 year,12.03.18,12.03.18,Feral,Male,,,x,,,,,x,,,,,,,,,10,TCACAGGT,TCACAGGT,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR55,ARF55,303,Unknown,20.03.18,20.03.18,Feral,Male,,,x,,,x,,x,,,,x,,,,,11,CCTTAGAC,CCTTAGAG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR6,ARF6,9268,Unknown,Unknown,03.04.18,Feral,Male,,x,,,,,,x,,,,,,Healthy,,,12,GTAAGGTC,GTAAGGTC,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR7,ARF7,103922,Unknown,12.03.18,12.03.18,Feral,Female,,,x,,,,,x,,,,x,,,,Pregnant/nursing,13,GATCGAGC,GATCGAGG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR57,ARD57,2758,Unknown,30.04.18,30.04.18,Tame,Male,,,,x,,x,,x,,,,x,,Healthy,,,14,CAAGAGAC,CAAGAGAC,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR58,ARD58,2590,Unknown,30.04.18,30-04.18,Tame,Female,,,,,x,x,,x,,,,x,,Healthy,,,15,TAGAAGAC,TAGAAGAG,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Aruba,AR34,ARD34,31,Unknown,09.03.18,09.03.18,Tame,Male,,,,,,x,,x,,,,,,Healthy,,,16,AGCGTGTA,AGCGTGTA,Bsh,"Hot, semi-arid",Emerging market and developing economy,43.70%
+Cabo Verde,CV4,CVD4,D4,2 years,Street cat,03.10.18,Tame,Male,,,,x,,x,,x,,,x,x,,Healthy,,,1,AACTGTGC,AACTGTGG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV37,CVD37,Gata 17 - Bamboia,1 year,14.11.18,14.11.18,Tame,Female,,,,x,,x,,x,,,,x,,Healthy,,,2,TCGTACAG,TCGTACAG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV2,CVD2,D2,5 months,Street cat,03.10.18,Tame,Male,,,,x,,x,,x,,,x,x,,Healthy,,,3,CTCACTGC,CTCACTGG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV34,CVD34,Gata 14 - Kitty,1 year,13.11.18,13.11.18,Tame,Female,,,,x,,x,,x,,,,x,,Healthy,,,4,GTGCTACT,GTGCTACT,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV15,CVD15,D15,2 years,Street cat,04.10.18,Tame,Female,,,,,x,x,,x,,,x,x,,Healthy,,,5,GCTTGACC,GCTTGACG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV19,CVD19,D19,5 years,Street cat,16.10.18,Tame,Male,,x,x,,x,,,x,,,x,x,,Healthy,,Pregnant/nursing..... but male?,6,CATCATCT,CATCATCT,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV30,CVD30,Gata 10 - Joel,3 years,12.11.18,12.11.18,Tame,Male,,x,,,,x,,x,,,,x,,Healthy,,,7,TGCTACTC,TGCTACTG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV5,CVD5,D5,2 years,Street cat,Unknown,Tame,Male,,,,x,,x,,x,,,x,x,,Healthy,,,8,AGAAGTGT,AGAAGTGT,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV10,CVD10,D10,9 months,Street cat,04.10.18,Tame,Male,,,,,x,x,,x,,,x,x,,Healthy,,,9,AGTGTCAC,AGTGTCAG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV13,CVD13,D13,10 months,Street cat,04.10.18,Tame,Female,,,,x,,x,,x,,,x,x,,Healthy,,,10,TCACAGGT,TCACAGGT,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV17,CVD17,D17,9 months,Street cat,16.10.18,Tame,Male,,,x,,x,x,,x,,,x,x,,Healthy,,,11,CCTTAGAC,CCTTAGAG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV20,CVD20,D20,8 years,Street cat,16.10.18,Tame,Female,,,,,x,x,,x,,,x,x,,Healthy,,,12,GTAAGGTC,GTAAGGTC,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV23,CVF23,Gata 3 - Bela,1 year,26.10.18,26.10.18,Feral,Female,,,,x,,x,,x,,,,x,,Healthy,,Pregnant/Nursing,13,GATCGAGC,GATCGAGG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV27,CVF27,Gata 7 - Estolino 1,3 years,31.10.18,31.10.18,Feral,Female,,,,x,,x,,,x,,,,,Matted,,,14,CAAGAGAC,CAAGAGAC,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV29,CVF29,Gata 9 - Kiko,4 years,12.11.18,12.11.18,Feral,Male,,,,x,,x,,x,,,,x,,,,,15,TAGAAGAC,TAGAAGAG,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Cabo Verde,CV33,CVF33,Gata 13 - Xana,7 months,13.11.18,13.11.18,Feral,Female,,,,x,,x,,x,,,,x,,Healthy,,,16,AGCGTGTA,AGCGTGTA,Bwh,Tropical and subtropical desert,Emerging market and developing economy,66.65%
+Malaysia,MY10,MYD10,D10,1 year,15.11.17,15.11.17,Tame,Male,,,,x,,x,,,,,,x,,Healthy,,Overweight,1,AACTGTGC,AACTGTGG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY15,MYD15,D15,1 year,18.11.17,18.11.17,Tame,Female,,,,,,,,x,,,,x,,Healthy,,,2,TCGTACAG,TCGTACAG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY16,MYD16,D16,1 year,18.11.17,18.11.17,Tame,Male,,,,x,,x,,x,,,,x,,Healthy,,,3,CTCACTGC,CTCACTGG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY18,MYD18,D18,6 months,19.11.17,19.11.17,Tame,Male,,,,x,,x,,x,,,,x,,Healthy,,,4,GTGCTACT,GTGCTACT,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY49,MYF49,F19,2 years,24.11.17,24.11.17,Feral,Male,,x,x,,,x,,,x,,x,x,,,,,5,GCTTGACC,GCTTGACG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY3,MYD3,D3(5),1.5 year,12.11.17,12.11.17,Tame,Male,,,,,,x,,x,,,,x,,Healthy,,,6,CATCATCT,CATCATCT,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY9,MYD9,D9,1 year,15.11.17,15.11.17,Tame,Female,,,,x,,x,,x,,,x,x,,Healthy,,,7,TGCTACTC,TGCTACTG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY19,MYD19,D19,6 months,19.11.17,19.11.17,Tame,Female,,,,x,,x,,x,,,,x,,Healthy,,,8,AGAAGTGT,AGAAGTGT,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY27,MYD27,D27,1 year,23.11.17,23.11.17,Tame,Female,,,,x,,x,,x,,,,x,,Healthy,,,9,AGTGTCAC,AGTGTCAG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY36,MYF36,F6 (2),6 months,16.11.17,16.11.17,Feral,Male,,x,,x,,,x,x,,,,x,,Healthy,,,10,TCACAGGT,TCACAGGT,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY45,MYF45,F15,1 year,22.11.17,22.11.17,Feral,Female,,x,,x,,,x,x,,,,x,,Healthy,,Pregnant/nursing,11,CCTTAGAC,CCTTAGAG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY48,MYF48,F18,8 months,23.11.17,23.11.17,Feral,Female,,x,,,x,,x,x,,,,x,,Healthy,,,12,GTAAGGTC,GTAAGGTC,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY52,MYF52,F22 (4),4 months,26.11.17,26.11.17,Feral,Male,x,,,x,,,x,x,,,x,x,,Healthy,,,13,GATCGAGC,GATCGAGG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY54,MYF54,F24,1 year,17.12.17,17.12.17,Feral,Female,x,x,x,,x,,x,x,,,,x,,Healthy,,,14,CAAGAGAC,CAAGAGAC,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,MY57,MYF57,F27,1 year,20.12.17,20.12.17,Feral,Female,,x,x,x,,,x,x,,,,x,,Healthy,,,15,TAGAAGAC,TAGAAGAG,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Malaysia,Blank,MYX,Blank,,,,,,,,,,,,,,,,,,,,,,16,AGCGTGTA,AGCGTGTA,Af,Tropical rainforest,Emerging market and developing economy,77.16%
+Spain,ES1,ESD1,2019/06/U7 Bubu,1 year,28.06.2019,28.06.2019,Tame (indoor),Male,,,,,x,x,,x,,,x,x,,Healthy,,scared,1,AACTGTGC,AACTGTGG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES2,ESD2,2019/06/U8 Kitty,1 year,28.06.2019,28.06.2019,Tame (indoor),Female,,,,,x,x,,x,,x,,x,,Healthy,,scared,2,TCGTACAG,TCGTACAG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES3,ESF3,2019/06/U9 Grisi,1.5 years,28.06.2019,28.06.2019,Feral,Female,x,,,x,,,x,x,,,x,x,,Healthy,,Lactating + scared,3,CTCACTGC,CTCACTGG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES4,ESF4,2019/06/083-3 Lena,1.5 years,19.06.2019,19.06.2019,Feral,Female,,,,x,,,x,x,,,x,x,,Healthy,,Lactating + scared + mites in both ears,4,GTGCTACT,GTGCTACT,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES5,ESD5,2019/06/087 Mukina,7 years,20.06.2019,20.06.2019,Tame (outdoor),Female,,,,,x,x,,x,,,x,x,,Healthy,,Lactating,5,GCTTGACC,GCTTGACG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES6,ESD6,2019/06/095 Lima,9 months,21.06.2019,21.06.2019,Tame (indoor),Female,,,,x,,x,,x,,,x,x,,Healthy,,scared,6,CATCATCT,CATCATCT,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES7,ESF7,2019/05/057 Romeo,2 years,13.05.2019,13.05.2019,Feral,Male,,x,,,x,,x,x,,,x,x,,Healthy,,,7,TGCTACTC,TGCTACTG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES8,ESD8,2019/05/056 Nara,6 months,13.05.2019,13.05.2019,Tame (indoor),Female,,x,,,,x,,x,,,x,x,,Healthy,,"Hisses in clinic, but is sociable at home",8,AGAAGTGT,AGAAGTGT,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES9,ESF9,2019/05/058 Princesa,8 years,10.05.2019,13.05.2019,Feral,Female,,,,,,,x,x,,,x,x,,Healthy,,scared,9,AGTGTCAC,AGTGTCAG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES10,ESD10,2019/06/008 Misca,1 year,03.06.2019,03.06.2019,Tame (indoor),Female,,,,x,,x,,x,,,x,x,,Healthy,,scared,10,TCACAGGT,TCACAGGT,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES11,ESF11,2019/06/025 Ultima,1 year,06.06.2019,06.06.2019,Feral,Female,x,x,,,x,,x,x,,,x,x,x,Healthy,,scared + wound on nose from trying to escape cage,11,CCTTAGAC,CCTTAGAG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES12,ESF12,2019/06/024 Blanca,4 years,06.06.2019,06.06.2019,Feral,Female,,,,x,,,x,,x,,x,x,x,,,scared + lactating + ear mites and ear dermatitis,12,GTAAGGTC,GTAAGGTC,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES13,ESF13,2019/06/044-1 Tricolor II,3 years,11.06.2019,11.06.2019,Feral,Female,,x,,,x,,x,x,x,,x,x,,,,Ear issues,13,GATCGAGC,GATCGAGG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES14,ESD14,2019/06/050 Sol,1 year,12.06.201,12.06.2019,Tame (indoor),Male,,,,x,,x,,x,,,x,x,,Healthy,,,14,CAAGAGAC,CAAGAGAC,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES15,ESF15,2019/06/049 Naranuto,1 year,11.06.2019,11.06.2019,Feral,Male,,x,,x,,,x,x,,,x,x,,Healthy,,Ear issues,15,TAGAAGAC,TAGAAGAG,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Spain,ES16,ESD16,2019/06/043 Lia,13 months,11.06.2019,11.06.2019,Tame (indoor),Female,,,,x,,x,,x,,,x,x,,Healthy,,scared,16,AGCGTGTA,AGCGTGTA,BSh,"Hot, semi-arid",Advanced Economy,80.81%
+Brazil,BR1,BRF1,BR1,Unknown,,06.07.18,Feral,Female,x,,x,,,,x,x,,,,x,,,,,1,AACTGTGC,AACTGTGG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR2,BRF2,BR2,Unknown,,30.12.18,Feral,Female,x,,,,x,,x,,,,,,x,Bad,,,2,TCGTACAG,TCGTACAG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR15,BRF15,BR15,Unknown,,06.07.18,Feral,Male,x,x,,,,,,,,,x,x,,,,,3,CTCACTGC,CTCACTGG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR16,BRF16,BR16,Unknown,,06.06.18,Feral,Female,,,x,,,,,,,x,,,,,,,4,GTGCTACT,GTGCTACT,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR18,BRF18,BR18,Adult,,10.02.18,Feral,Male,x,,,,,x,,,,,x,,,Healthy,,,5,GCTTGACC,GCTTGACG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR20,BRF20,BR20,Unknown,,05.06.18,Feral,Male,x,x,,,,,,,,,,,x,Bad,,,6,CATCATCT,CATCATCT,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR23,BRF23,BR23,Adult,,05.05.18,Feral,Female,,,x,,,,,,,,,x,,,,,7,TGCTACTC,TGCTACTG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR24,BRF24,BR24,Adult,,01.06.18,Feral,Male,x,,,,,,,,,,x,,,,,,8,AGAAGTGT,AGAAGTGT,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR33,BRD33,Mimi,Unknown,28.01.17,x.01.18,Tame,Female,,,,,,,,x,,,x,x,,Healthy,,,9,AGTGTCAC,AGTGTCAG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR34,BRD34,Greta,5 years,29.05.15,x.01.18,Tame,Female,x,,,,,,,x,,,x,x,,Healthy,,,10,TCACAGGT,TCACAGGT,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR37,BRD37,Pistache,1 year,05.12.17,x.01.18,Tame,Male,,,x,,,,,x,,,,x,,,,seguila neurologica,11,CCTTAGAC,CCTTAGAG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR38,BRD38,Siam,3 years,13.07.15,x.01.18,Tame,Male,,,x,,,,,x,,,x,x,,Healthy,,paraplogico bipede,12,GTAAGGTC,GTAAGGTC,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR41,BRD41,Kowalski,7 years,29.05.16,x.01.18,Tame,Male,,,,,,,,x,,,,x,,Healthy,,FeLV+,13,GATCGAGC,GATCGAGG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR42,BRD42,Miu,8 years,29.03.16,x.01.18,Tame,Male,,,,,,,,x,,,,x,,Healthy,,seguila neurologica,14,CAAGAGAC,CAAGAGAC,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR45,BRD45,Berinjela,6 years,10.10.xx,12.03.18,Tame,Female,,,,x,,x,,x,,,x,x,,Healthy,,,15,TAGAAGAC,TAGAAGAG,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Brazil,BR46,BRD46,Panqueca,6 years,20.10.xx,12.03.18,Tame,Female,,,,,,x,,x,,,,x,,Healthy,,,16,AGCGTGTA,AGCGTGTA,cfa,Humid subtropical,Emerging market and developing economy,87.07%
+Denmark,DKB10,1025903,,Unknown,03.05.17,04.05.17,Tame,Unknown,,,,,,,,,,,,,,,x,Pregnant,1,AACTGTGC,AACTGTGG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB11,1025943,,Unknown,03.05.17,04.05.17,Feral,Unknown,,x,,,x,,,,,,,,,,x,,2,TCGTACAG,TCGTACAG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB13,1026125,,Unknown,29.05.17,30.05.17,Feral,Unknown,,,x,x,,,,,,,,,,Bad,x,,3,CTCACTGC,CTCACTGG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB16,1025495,,Unknown,21.02.17,21.02.17,Feral,Unknown,,,,x,,,,,,,,,,,x,,4,GTGCTACT,GTGCTACT,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB18,17462,,Unknown,03.10.17,04.10.17,Tame,Unknown,,,,,,,,,,,,,,,x,,5,GCTTGACC,GCTTGACG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB20,1025417 (1),,Unknown,10.03.17,11.03.17,Feral,Unknown,,,,,x,x,,,,,,,,,x,,6,CATCATCT,CATCATCT,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB21,1025679 (2),,Unknown,17.03.17,20.03.17,Feral,Unknown,x,x,,,x,,,,,,,,,,x,,7,TGCTACTC,TGCTACTG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB25,1024977(3),,Unknown,15.02.17,16.02.17,Feral,Unknown,x,,,x,,x,,,,,,x,,,x,,8,AGAAGTGT,AGAAGTGT,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB27,17166,,Unknown,02.05.17,03.05.17,Tame,Unknown,,,,,,,,,,x,,,,,x,,9,AGTGTCAC,AGTGTCAG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB3,DKB3,,Unknown,02.08.17,03.08.17,Feral,Unknown,,x,,x,,x,x,,,,,,,,x,,10,TCACAGGT,TCACAGGT,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB30,1025481,,Unknown,01.03.17,02.03.17,Feral,Unknown,,x,x,x,,,x,,,,,,,,x,,11,CCTTAGAC,CCTTAGAG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB31,1025526,,Unknown,16.02.17,17.02.17,Tame,Unknown,,x,,,,,x,,,,,,,,x,,12,GTAAGGTC,GTAAGGTC,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB6,1025556,,Unknown,10.04.17,11.04.17,Tame,Female,,,,,,x,,,,,,,,,,,13,GATCGAGC,GATCGAGG,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB7,1025639,,Unknown,07.03.17,08.03.17,Tame,Unknown,,,,x,,x,,,,,,,,Bad,x,,14,CAAGAGAC,CAAGAGAC,Dfb,Humid continental,Advanced Economy,88.12%
+Denmark,DKB9,1025731,,Unknown,03.04.17,05.04.17,Feral,Unknown,,,x,,,,,,,,,,,,x,,15,TAGAAGAC,TAGAAGAG,Dfb,Humid continental,Advanced Economy,88.12%
