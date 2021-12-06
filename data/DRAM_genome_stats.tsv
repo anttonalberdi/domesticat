@@ -1,0 +1,231 @@
+genome	number of scaffolds	taxonomy	5S rRNA	16S rRNA	23S rRNA	tRNA count
+bin_Aruba.10	314	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Prevotella;s__Prevotella sp900544825	bin_Aruba.10_Aruba_009862 (2, 101)			51
+bin_Aruba.11	374	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Pauljensenia;s__Pauljensenia hyovaginalis		bin_Aruba.11_Aruba_001629 (11703, 13147)		39
+bin_Aruba.13	540	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-81;s__CAG-81 sp000435795				28
+bin_Aruba.15	456	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Sutterella;s__	bin_Aruba.15_Aruba_007216 (480, 588)			28
+bin_Aruba.18	45	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus;s__Streptococcus lutetiensis				28
+bin_Aruba.2	40	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium;s__Bifidobacterium adolescentis	bin_Aruba.2_Aruba_000044 (79379, 79488)			54
+bin_Aruba.21	287	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__				45
+bin_Aruba.25	48	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium;s__Bifidobacterium pseudocatenulatum	bin_Aruba.25_Aruba_000385 (14849, 14959)			47
+bin_Aruba.28	215	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter;s__		bin_Aruba.28_Aruba_001243 (14478, 15306)		34
+bin_Aruba.36	378	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Tissierellales;f__Peptoniphilaceae;g__Peptoniphilus_C;s__Peptoniphilus_C sp902363535				15
+bin_Aruba.39	60	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella sp902362275	bin_Aruba.39_Aruba_000073 (68817, 68924)	bin_Aruba.39_Aruba_000073 (72446, 73107)	bin_Aruba.39_Aruba_000073 (69082, 72042)	53
+bin_Aruba.4	815	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Plesiomonas;s__Plesiomonas shigelloides				44
+bin_Aruba.43	397	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia;s__Roseburia sp900548205				41
+bin_Aruba.47	403	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Mycobacteriales;f__Mycobacteriaceae;g__Lawsonella;s__	bin_Aruba.47_Aruba_000553 (105, 216)			42
+bin_Aruba.51	411	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Atopobiaceae;g__Parolsenella;s__Parolsenella sp900544655	bin_Aruba.51_Aruba_013207 (18, 125)			38
+bin_Aruba.52	339	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Tissierellales;f__Peptoniphilaceae;g__;s__				33
+bin_Aruba.57	125	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Mycobacteriales;f__Mycobacteriaceae;g__Corynebacterium;s__Corynebacterium pyruviciproducens	2 present	bin_Aruba.57_Aruba_000264 (34180, 35703)		51
+bin_Aruba.64	96	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Megasphaeraceae;g__Megasphaera;s__Megasphaera sp000417505	3 present			57
+bin_Aruba.65	31	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_B;s__Helicobacter_B canis				35
+bin_Brazil.1	41	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia;s__				49
+bin_Brazil.100	396	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Bulleidia;s__Bulleidia sp900539965				17
+bin_Brazil.103	194	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola plebeius_A	2 present			75
+bin_Brazil.104	235	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Absicoccus;s__Absicoccus sp000434355	bin_Brazil.104_Brazil_041922 (3789, 3892)			15
+bin_Brazil.11	275	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes;s__Alistipes putredinis				37
+bin_Brazil.110	564	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Barnesiellaceae;g__Barnesiella;s__Barnesiella intestinihominis				33
+bin_Brazil.118	419	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__CAG-145;s__				16
+bin_Brazil.124	189	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides;s__				65
+bin_Brazil.128	394	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_A;s__				21
+bin_Brazil.135	442	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruminococcus_C;s__Ruminococcus_C callidus				28
+bin_Brazil.136	725	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium;s__Clostridium thermobutyricum	3 present			21
+bin_Brazil.138	119	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides;s__Parabacteroides sp000436495	2 present			68
+bin_Brazil.140	167	d__Bacteria;p__Fusobacteriota;c__Fusobacteriia;o__Fusobacteriales;f__Fusobacteriaceae;g__Fusobacterium_A;s__Fusobacterium_A sp900543175	4 present			50
+bin_Brazil.149	469	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Emergencia;s__	bin_Brazil.149_Brazil_025242 (5358, 5438)			25
+bin_Brazil.15	365	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Sutterella;s__				41
+bin_Brazil.151	190	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella intestinalis	2 present			44
+bin_Brazil.154	515	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelatoclostridiaceae;g__Erysipelatoclostridium;s__	2 present			21
+bin_Brazil.158	177	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelatoclostridiaceae;g__Catenibacterium;s__Catenibacterium sp000437715	2 present			34
+bin_Brazil.166	355	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__				25
+bin_Brazil.168	372	d__Bacteria;p__Desulfobacterota;c__Desulfovibrionia;o__Desulfovibrionales;f__Desulfovibrionaceae;g__Desulfovibrio;s__Desulfovibrio sp900556755	2 present		bin_Brazil.168_Brazil_014950 (1, 814)	56
+bin_Brazil.177	395	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Evtepia;s__	3 present			36
+bin_Brazil.3	238	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas;s__Faecalimonas sp900555395				43
+bin_Brazil.40	339	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger;s__Gemmiger sp900540595	2 present			36
+bin_Brazil.43	212	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola vulgatus				56
+bin_Brazil.48	217	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides;s__Bacteroides sp900766005				53
+bin_Brazil.54	394	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Dorea_B;s__Dorea_B phocaeensis				22
+bin_Brazil.57	504	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Marinifilaceae;g__Butyricimonas;s__Butyricimonas virosa		bin_Brazil.57_Brazil_010847 (5734, 7307)	bin_Brazil.57_Brazil_010847 (7525, 9085)	45
+bin_Brazil.58	76	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Megasphaeraceae;g__Megasphaera;s__Megasphaera elsdenii				50
+bin_Brazil.6	355	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola coprocola				54
+bin_Brazil.61	332	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella tanakaei	bin_Brazil.61_Brazil_037894 (1, 94)			44
+bin_Brazil.63	237	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eubacterium_G;s__				39
+bin_Brazil.64	133	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__CAG-521;s__				50
+bin_Brazil.65	454	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Selenomonadales;f__Selenomonadaceae;g__Mitsuokella;s__Mitsuokella sp900552565	2 present			45
+bin_Brazil.68	112	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Campylobacteraceae;g__Campylobacter_D;s__Campylobacter_D helveticus				40
+bin_Brazil.69	226	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Clostridium_A;s__Clostridium_A leptum	2 present			41
+bin_Brazil.72	292	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Faecalibacterium;s__Faecalibacterium sp900540455				51
+bin_Brazil.73	183	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Marinifilaceae;g__Odoribacter;s__	2 present			46
+bin_Brazil.75	267	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_C;s__				21
+bin_Brazil.8	314	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A sp900547615				29
+bin_Brazil.83	500	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Anaerotignaceae;g__Anaerotignum;s__				23
+bin_Brazil.86	637	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes;s__Alistipes dispar				23
+bin_Brazil.88	227	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__CAG-521;s__				48
+bin_Brazil.89	392	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas;s__Faecalimonas sp900550235				30
+bin_Brazil.91	87	d__Bacteria;p__Firmicutes;c__Bacilli;o__RF39;f__UBA660;g__CAG-988;s__CAG-988 sp003149915				30
+bin_Brazil.93	144	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas;s__				53
+bin_Brazil.96	274	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides;s__Bacteroides uniformis				49
+bin_Brazil.97	591	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UBA9502;s__UBA9502 sp900538475				30
+bin_Brazil.98	194	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Mobilibacterium;s__Mobilibacterium sp900315625				24
+bin_CaboVerde.10	286	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Campylobacteraceae;g__Campylobacter_D;s__				26
+bin_CaboVerde.14	126	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Lactobacillus;s__Lactobacillus acidophilus				30
+bin_CaboVerde.24	152	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Enterococcaceae;g__Enterococcus_E;s__Enterococcus_E cecorum	2 present			22
+bin_CaboVerde.3	50	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium_P;s__Clostridium_P perfringens	3 present			67
+bin_CaboVerde.37	134	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Porphyromonadaceae;g__Porphyromonas_A;s__				35
+bin_CaboVerde.38	239	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Megasphaeraceae;g__Megasphaera;s__Megasphaera sp000417505	3 present			50
+bin_CaboVerde.50	426	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Trueperella;s__	bin_CaboVerde.50_CaboVerde_002566 (9197, 9308)	bin_CaboVerde.50_CaboVerde_002566 (4294, 5822)	bin_CaboVerde.50_CaboVerde_002566 (6036, 9108)	41
+bin_CaboVerde.51	331	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__S5-A14a;s__				15
+bin_CaboVerde.55	454	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Succinivibrionaceae;g__Anaerobiospirillum_A;s__Anaerobiospirillum_A thomasii	3 present			37
+bin_CaboVerde.60	23	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Ligilactobacillus;s__Ligilactobacillus agilis	2 present			61
+bin_CaboVerde.61	499	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia;s__Roseburia sp900548205				26
+bin_CaboVerde.9	93	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_B;s__Helicobacter_B canis				35
+bin_Denmark.109	509	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella;s__Eisenbergiella sp900550285				41
+bin_Denmark.113	58	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus;s__Streptococcus alactolyticus				18
+bin_Denmark.117	64	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Lactococcus;s__Lactococcus garvieae	3 present			43
+bin_Denmark.118	56	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Dorea_A;s__Dorea_A longicatena				51
+bin_Denmark.120	138	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Acidaminococcales;f__Acidaminococcaceae;g__Acidaminococcus;s__Acidaminococcus sp000437815	bin_Denmark.120_Denmark_000647 (33416, 33527)			53
+bin_Denmark.14	267	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium;s__Bifidobacterium gallinarum				44
+bin_Denmark.17	80	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella bouchesdurhonensis				47
+bin_Denmark.20	562	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Enterocloster;s__Enterocloster sp001517625				26
+bin_Denmark.22	96	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Eubacterium_M;s__	2 present			41
+bin_Denmark.27	162	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Enterococcaceae;g__Enterococcus_B;s__Enterococcus_B hirae	2 present			43
+bin_Denmark.28	336	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__UMGS124;g__;s__	bin_Denmark.28_Denmark_005134 (10275, 10386)			51
+bin_Denmark.34	150	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Fusicatenibacter;s__Fusicatenibacter saccharivorans		bin_Denmark.34_Denmark_000911 (26950, 28349)		53
+bin_Denmark.4	254	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella stercoris	bin_Denmark.4_Denmark_004728 (451, 558)			25
+bin_Denmark.44	153	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Atopobiaceae;g__UBA7748;s__UBA7748 sp900314535				51
+bin_Denmark.50	320	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Peptostreptococcaceae;g__Peptacetobacter;s__Peptacetobacter sp900539645	5 present			12
+bin_Denmark.51	146	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__VUNA01;s__VUNA01 sp002299625	bin_Denmark.51_Denmark_000461 (3, 113)			42
+bin_Denmark.56	395	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Levilactobacillus;s__Levilactobacillus brevis				38
+bin_Denmark.61	25	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Latilactobacillus;s__Latilactobacillus sakei	2 present			29
+bin_Denmark.62	305	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q;s__Clostridium_Q sp000435655				33
+bin_Denmark.63	438	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Anaerostipes;s__Anaerostipes hadrus				20
+bin_Denmark.66	171	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia;s__Blautia sp900120295				35
+bin_Denmark.7	108	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Selenomonadales;f__Selenomonadaceae;g__Mitsuokella;s__Mitsuokella sp003458855	5 present			72
+bin_Malaysia.108	505	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia;s__				26
+bin_Malaysia.117	32	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Prevotellamassilia;s__Prevotellamassilia sp900541335	2 present			39
+bin_Malaysia.125	281	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia;s__Blautia sp900539145				32
+bin_Malaysia.127	65	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Ligilactobacillus;s__Ligilactobacillus agilis	3 present			53
+bin_Malaysia.13	520	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Muribaculaceae;g__CAG-279;s__				32
+bin_Malaysia.132	429	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Fournierella;s__Fournierella massiliensis				17
+bin_Malaysia.16	328	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Marseille-P4683;s__	2 present			30
+bin_Malaysia.18	291	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Prevotellamassilia;s__Prevotellamassilia sp000437675				54
+bin_Malaysia.26	94	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger;s__				43
+bin_Malaysia.34	258	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Lawsonibacter;s__Lawsonibacter sp000177015				20
+bin_Malaysia.35	50	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Ligilactobacillus;s__Ligilactobacillus animalis	4 present			58
+bin_Malaysia.4	119	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Ligilactobacillus;s__Ligilactobacillus ruminis	4 present			26
+bin_Malaysia.43	363	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Acidaminococcales;f__Acidaminococcaceae;g__Phascolarctobacterium;s__Phascolarctobacterium faecium	2 present	bin_Malaysia.43_Malaysia_028167 (1, 399)		41
+bin_Malaysia.45	378	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A wexlerae				38
+bin_Malaysia.50	218	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Succinivibrionaceae;g__Succinivibrio;s__	bin_Malaysia.50_Malaysia_001552 (150, 248)			35
+bin_Malaysia.6	46	d__Bacteria;p__Fusobacteriota;c__Fusobacteriia;o__Fusobacteriales;f__Fusobacteriaceae;g__Fusobacterium_B;s__Fusobacterium_B sp900545035				49
+bin_Malaysia.64	290	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Paraprevotella;s__Paraprevotella clara				48
+bin_Malaysia.7	353	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-317;s__CAG-317 sp900543415				29
+bin_Malaysia.70	89	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Acidaminococcales;f__Acidaminococcaceae;g__Acidaminococcus;s__Acidaminococcus timonensis	2 present			53
+bin_Malaysia.73	323	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__				33
+bin_Malaysia.75	225	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__UMGS905;s__UMGS905 sp900540085				38
+bin_Malaysia.77	182	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola sp900542985				67
+bin_Malaysia.78	437	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Ruminococcus_E;s__Ruminococcus_E bromii_B	bin_Malaysia.78_Malaysia_001301 (3905, 4015)			25
+bin_Malaysia.81	106	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Megasphaeraceae;g__Megasphaera;s__Megasphaera stantonii	2 present			52
+bin_Malaysia.84	354	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__TANB77;f__CAG-508;g__CAG-354;s__CAG-354 sp900552655				28
+bin_Malaysia.86	636	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eisenbergiella;s__				26
+bin_Malaysia.96	485	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Megasphaeraceae;g__Caecibacter;s__Caecibacter sp003467125				18
+bin_Malaysia.98	496	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__UMGS1872;s__	bin_Malaysia.98_Malaysia_026225 (3843, 3950)			23
+bin_Spain.11	335	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Sellimonas;s__				24
+bin_Spain.21	173	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola coprophilus	bin_Spain.21_Spain_000396 (4, 95)			80
+bin_Spain.23	226	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Muribaculaceae;g__CAG-279;s__CAG-279 sp900541935				52
+bin_Spain.37	500	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UMGS1472;s__UMGS1472 sp900552095				28
+bin_Spain.4	522	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola sp000436795	bin_Spain.4_Spain_015579 (2, 80)			55
+bin_Spain.42	341	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_D;s__				32
+bin_Spain.43	144	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__CAG-521;s__CAG-521 sp000437635				52
+bin_Spain.45	589	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Eubacterium_H;s__Eubacterium_H sp002394235				34
+bin_Spain.48	760	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides;s__Bacteroides fragilis				45
+bin_Spain.58	474	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Peptostreptococcales;f__Anaerovoracaceae;g__Mobilibacterium;s__Mobilibacterium sp900315625		bin_Spain.58_Spain_014283 (3715, 4434)		7
+bin_Spain.6	656	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Schaedlerella;s__Schaedlerella glycyrrhizinilytica				24
+bin_Spain.60	541	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__UMGS1370;s__		bin_Spain.60_Spain_004391 (1, 403)		12
+bin_Spain.67	213	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B;s__Ruminococcus_B sp900544395				34
+bin_Spain.73	63	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_B;s__Helicobacter_B canis_B				35
+bin_Spain.77	554	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Butyricicoccaceae;g__Butyricicoccus;s__	bin_Spain.77_Spain_037493 (1777, 1871)		bin_Spain.77_Spain_061568 (362, 1746)	29
+bin_Spain.9	120	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Bulleidia;s__				32
+fasta	1	bin_taxonomy				1
+bin_Aruba.14	445	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella stercoris				29
+bin_Aruba.29	298	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger;s__Gemmiger variabilis_C				43
+bin_Aruba.31	51	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Negativibacillus;s__Negativibacillus sp000435195	4 present			43
+bin_Aruba.54	278	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Tissierellales;f__Peptoniphilaceae;g__Peptoniphilus_A;s__				12
+bin_Aruba.6	81	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium;s__Bifidobacterium longum				58
+bin_Aruba.60	245	d__Bacteria;p__Actinobacteriota;c__Actinomycetia;o__Actinomycetales;f__Actinomycetaceae;g__Pauljensenia;s__				43
+bin_Brazil.105	409	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Clostridium_Q;s__				28
+bin_Brazil.107	529	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Monoglobales_A;f__UBA1381;g__CAG-41;s__CAG-41 sp900066215				25
+bin_Brazil.109	486	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Butyricicoccaceae;g__AM07-15;s__AM07-15 sp003477405	bin_Brazil.109_Brazil_031890 (4431, 4539)			26
+bin_Brazil.111	259	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Succinivibrionaceae;g__Succinivibrio;s__Succinivibrio sp000431835	2 present			57
+bin_Brazil.113	502	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Anaerobutyricum;s__Anaerobutyricum sp900754855				22
+bin_Brazil.116	509	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas;s__				16
+bin_Brazil.12	493	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Enterococcaceae;g__Enterococcus;s__Enterococcus faecalis				29
+bin_Brazil.137	563	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__CAG-110;s__				28
+bin_Brazil.145	62	d__Bacteria;p__Cyanobacteria;c__Vampirovibrionia;o__Gastranaerophilales;f__Gastranaerophilaceae;g__Zag111;s__	bin_Brazil.145_Brazil_003000 (435, 542)			40
+bin_Brazil.146	164	d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__RF32;f__CAG-239;g__CAG-495;s__CAG-495 sp001917125				34
+bin_Brazil.153	552	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Ruminococcus_C;s__Ruminococcus_C sp000437175	bin_Brazil.153_Brazil_030292 (87, 196)			24
+bin_Brazil.157	328	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__CAG-317;s__				41
+bin_Brazil.159	221	d__Bacteria;p__Fusobacteriota;c__Fusobacteriia;o__Fusobacteriales;f__Fusobacteriaceae;g__Fusobacterium_B;s__Fusobacterium_B sp900541465	bin_Brazil.159_Brazil_002493 (16869, 16965)			38
+bin_Brazil.160	374	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Tannerellaceae;g__Parabacteroides;s__Parabacteroides distasonis	bin_Brazil.160_Brazil_072436 (11, 116)			67
+bin_Brazil.163	168	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Prevotella;s__Prevotella lascolaii				43
+bin_Brazil.165	348	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia_A;s__Blautia_A caecimuris				31
+bin_Brazil.17	309	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia;s__				27
+bin_Brazil.170	316	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Enterococcaceae;g__Enterococcus_E;s__	bin_Brazil.170_Brazil_008555 (4, 96)			26
+bin_Brazil.22	23	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Streptococcaceae;g__Streptococcus;s__Streptococcus pasteurianus				46
+bin_Brazil.28	136	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Roseburia;s__				41
+bin_Brazil.32	44	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Mediterraneibacter;s__Mediterraneibacter torques				46
+bin_Brazil.35	167	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Acidaminococcales;f__Acidaminococcaceae;g__Phascolarctobacterium_A;s__Phascolarctobacterium_A sp900544885	2 present			47
+bin_Brazil.38	630	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes;s__Alistipes communis				16
+bin_Brazil.4	657	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Parasutterella;s__Parasutterella excrementihominis				28
+bin_Brazil.45	23	d__Bacteria;p__Firmicutes;c__Bacilli;o__RF39;f__UBA660;g__CAG-877;s__CAG-877 sp900554315	bin_Brazil.45_Brazil_003196 (17747, 17816)			32
+bin_Brazil.5	53	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Prevotella;s__Prevotella sp900540415				24
+bin_Brazil.50	495	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnospira;s__Lachnospira sp003451515				26
+bin_Brazil.51	334	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Sutterella;s__Sutterella wadsworthensis_A	bin_Brazil.51_Brazil_033590 (1192, 1299)			44
+bin_Brazil.56	377	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_A;s__Ruminococcus_A sp000432335				31
+bin_Brazil.70	775	d__Bacteria;p__Desulfobacterota;c__Desulfovibrionia;o__Desulfovibrionales;f__Desulfovibrionaceae;g__Mailhella;s__Mailhella sp003150275				28
+bin_Brazil.76	42	d__Bacteria;p__Firmicutes;c__Bacilli;o__RF39;f__UBA660;g__CAG-877;s__CAG-877 sp900554305	bin_Brazil.76_Brazil_000030 (175380, 175444)			33
+bin_Brazil.81	75	d__Bacteria;p__Firmicutes;c__Bacilli;o__RFN20;f__CAG-826;g__UBA4855;s__	2 present			41
+bin_Brazil.82	517	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Succinivibrionaceae;g__Anaerobiospirillum;s__Anaerobiospirillum succiniciproducens				50
+bin_Brazil.9	401	d__Bacteria;p__Proteobacteria;c__Alphaproteobacteria;o__RF32;f__CAG-239;g__CAG-495;s__CAG-495 sp000436375	bin_Brazil.9_Brazil_062689 (2397, 2506)	bin_Brazil.9_Brazil_034544 (1, 932)		18
+bin_Brazil.92	19	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__CAG-521;s__CAG-521 sp000437635	3 present			55
+bin_Brazil.99	250	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Lachnospira;s__Lachnospira sp900552795				45
+bin_CaboVerde.12	748	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Plesiomonas;s__Plesiomonas shigelloides				26
+bin_CaboVerde.16	114	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Limosilactobacillus;s__Limosilactobacillus reuteri	bin_CaboVerde.16_CaboVerde_002673 (9035, 9146)			31
+bin_CaboVerde.18	267	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Prevotella;s__Prevotella copri				49
+bin_CaboVerde.33	522	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Succinivibrionaceae;g__Anaerobiospirillum;s__Anaerobiospirillum sp900543125				45
+bin_CaboVerde.34	411	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Hungatella_A;s__				38
+bin_CaboVerde.35	222	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Tissierellales;f__Peptoniphilaceae;g__;s__				15
+bin_CaboVerde.47	471	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Pasteurellaceae;g__Histophilus;s__	2 present			28
+bin_Denmark.107	259	d__Bacteria;p__Proteobacteria;c__Gammaproteobacteria;o__Enterobacterales;f__Enterobacteriaceae;g__Escherichia;s__Escherichia flexneri	7 present			84
+bin_Denmark.127	380	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella sp900548365				42
+bin_Denmark.19	488	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Faecalimonas;s__Faecalimonas sp900556835				22
+bin_Denmark.29	597	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger;s__				34
+bin_Denmark.30	47	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola sp900546645	3 present			76
+bin_Denmark.42	538	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Clostridiales;f__Clostridiaceae;g__Clostridium_P;s__Clostridium_P perfringens	3 present			64
+bin_Denmark.52	227	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Ruminococcus_B;s__Ruminococcus_B gnavus				26
+bin_Denmark.60	170	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Dialisteraceae;g__Allisonella;s__Allisonella histaminiformans	2 present			50
+bin_Denmark.72	269	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Selenomonadales;f__Selenomonadaceae;g__Megamonas;s__Megamonas funiformis				30
+bin_Denmark.79	202	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Holdemanella;s__Holdemanella sp002299315	5 present	bin_Denmark.79_Denmark_017717 (4, 1448)	bin_Denmark.79_Denmark_017717 (1676, 4570)	36
+bin_Denmark.85	159	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Selenomonadales;f__Selenomonadaceae;g__Megamonas;s__	bin_Denmark.85_Denmark_000600 (34500, 34610)			27
+bin_Denmark.86	282	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Bariatricus;s__Bariatricus comes				54
+bin_Denmark.93	372	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Anaerotignaceae;g__Anaerotignum;s__Anaerotignum sp001304995	bin_Denmark.93_Denmark_015149 (514, 610)			48
+bin_Malaysia.102	221	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Negativibacillus;s__	5 present			42
+bin_Malaysia.103	176	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Acidaminococcales;f__Acidaminococcaceae;g__Acidaminococcus;s__Acidaminococcus intestini				49
+bin_Malaysia.105	103	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Phocaeicola;s__Phocaeicola massiliensis	4 present			56
+bin_Malaysia.110	395	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Catenibacillus;s__Catenibacillus sp900557175				48
+bin_Malaysia.115	304	d__Bacteria;p__Firmicutes;c__Bacilli;o__RFN20;f__CAG-826;g__UBA4855;s__				21
+bin_Malaysia.116	590	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Flavonifractor;s__Flavonifractor plautii	bin_Malaysia.116_Malaysia_009856 (7141, 7249)			26
+bin_Malaysia.121	237	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Bacteroidaceae;g__Bacteroides;s__Bacteroides stercoris				44
+bin_Malaysia.131	158	d__Bacteria;p__Bacteroidota;c__Bacteroidia;o__Bacteroidales;f__Rikenellaceae;g__Alistipes;s__Alistipes putredinis				40
+bin_Malaysia.17	87	d__Bacteria;p__Firmicutes;c__Bacilli;o__RF39;f__UBA660;g__CAG-877;s__				18
+bin_Malaysia.3	86	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Robinsoniella;s__				49
+bin_Malaysia.30	193	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Phocea;s__Phocea massiliensis	2 present			32
+bin_Malaysia.46	270	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Blautia;s__Blautia sp003287895				41
+bin_Malaysia.52	119	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Fusicatenibacter;s__Fusicatenibacter saccharivorans				53
+bin_Malaysia.61	393	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Helicobacteraceae;g__Helicobacter_C;s__Helicobacter_C labetoulli				13
+bin_Malaysia.65	481	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Ruminococcaceae;g__Gemmiger;s__Gemmiger qucibialis				25
+bin_Malaysia.69	55	d__Bacteria;p__Firmicutes;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Bulleidia;s__				51
+bin_Malaysia.72	104	d__Bacteria;p__Firmicutes;c__Bacilli;o__Lactobacillales;f__Lactobacillaceae;g__Limosilactobacillus;s__Limosilactobacillus reuteri	2 present			29
+bin_Malaysia.8	269	d__Bacteria;p__Firmicutes_C;c__Negativicutes;o__Veillonellales;f__Dialisteraceae;g__Dialister;s__Dialister sp900543165				29
+bin_Malaysia.9	515	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Oscillospirales;f__Oscillospiraceae;g__Dysosmobacter;s__Dysosmobacter welbionis	bin_Malaysia.9_Malaysia_028943 (10, 99)			19
+bin_Spain.26	256	d__Bacteria;p__Campylobacterota;c__Campylobacteria;o__Campylobacterales;f__Campylobacteraceae;g__Campylobacter_D;s__Campylobacter_D upsaliensis				25
+bin_Spain.53	112	d__Bacteria;p__Firmicutes_A;c__Clostridia;o__Lachnospirales;f__Lachnospiraceae;g__Sellimonas;s__				51
+bin_Spain.84	360	d__Bacteria;p__Actinobacteriota;c__Coriobacteriia;o__Coriobacteriales;f__Coriobacteriaceae;g__Collinsella;s__Collinsella sp900555555				53
