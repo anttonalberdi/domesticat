@@ -3,9 +3,9 @@ library(phyloseq)
 library(tidyr)
 
 ## Import data
-MAGcounts <- read.delim("DomestiCat_all_count.txt", sep = '\t')
-genomelength <- read.delim("DomestiCat_all_MAG_length.txt", sep = '\t')
-taxonomy <- read.delim("gtdbtk.bac120.summary.tsv", sep = '\t')
+MAGcounts <- read.delim("data/DomestiCat_all_MAG_counts.txt", sep = '\t')
+genomelength <- read.delim("data/DomestiCat_all_MAG_length.txt", sep = '\t')
+taxonomy <- read.delim("data/gtdbtk.bac120.summary.tsv", sep = '\t')
 
 ## Coerce count table into a phylseq OTU table
 # Convert to dataframe
