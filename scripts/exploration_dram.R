@@ -8,6 +8,7 @@ library(factoextra)
 library(ape)
 library(logisticPCA)
 library(vegan)
+library(psych)
 
 taxonomy <- read.delim("data/gtdbtk.bac120.summary.tsv", sep = '\t')
 taxonomyclean <- taxonomy %>% 
