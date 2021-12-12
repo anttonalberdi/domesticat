@@ -97,6 +97,16 @@ bin_q$genome=gsub(".fa","",bin_q$genome)
 bin_q=bin_q[bin_q$genome%in%rownames(dram),]
 bin_q=bin_q[match(rownames(dram),bin_q$genome),]
 
+# Barchart of bin qualities per Phylum
+data.frame(MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
+           Phylum=taxmatrix_mod$Phylum,
+           completeness=bin_q$completeness)%>%
+  ggplot(aes(y=completeness,x=MAG,fill=Phylum,color=Phylum)) +
+  geom_bar(stat = "identity")+
+  scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  scale_color_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  theme_bw()
+
 # group DRAM functions
 module=names(dram)[1:12]
 etc=names(dram)[13:25]
