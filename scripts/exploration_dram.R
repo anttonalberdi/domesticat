@@ -28,8 +28,12 @@ taxmatrix_mod=data.frame(taxmatrix)
 # taxmatrix_mod$Phylum[grepl("Firmi",taxmatrix_mod$Phylum)]="Firmicutes"
 
 # Load phylogenetic tree
-tree=read.tree("data/gtdbtk.bac120.classify_mod.tree")
-
+phylo_tree=read.newick("data/gtdbtk.bac120.classify.tree")
+phylo.tree=drop.tip(phylo_tree,phylo_tree$tip.label[-match(colnames(MAGcounts_relL_hel), phylo_tree$tip.label)])
+is.ultrametric(phylo.tree)
+phylo.tree=force.ultrametric(phylo.tree,method = "nnls")
+is.ultrametric(phylo.tree)
+plot(phylo.tree)
 # Load DRAM data
 DRAM_data=read.delim("data/DRAM_product.tsv",sep='\t')
 dim(DRAM_data)
@@ -84,8 +88,14 @@ colnames(DRAM[,colSums(DRAM)==0])
 # Discard completely absent functions from further exploration
 dram=DRAM[,colSums(DRAM)>0]
 
-# MAGs in taxonomy table and dram table in sam order.
+# MAGs in taxonomy table and dram table in same order.
 mean(rownames(dram)==rownames(taxmatrix_mod))
+
+# Load bin quality data
+bin_q=read.csv("data/All_drep_bin_quality.csv")
+bin_q$genome=gsub(".fa","",bin_q$genome)
+bin_q=bin_q[bin_q$genome%in%rownames(dram),]
+bin_q=bin_q[match(rownames(dram),bin_q$genome),]
 
 # group DRAM functions
 module=names(dram)[1:12]
@@ -112,6 +122,18 @@ data.frame(dram[module],MAG=factor(rownames(dram),levels = rownames(dram)[order(
   geom_bar(stat = "identity")+
   facet_wrap(~name, scale = "free") +
   coord_cartesian(ylim = c(0,1))+
+  scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  theme_bw()
+
+# Module coverage vs MAG completeness (by Phylum) 
+data.frame(dram[module],
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
+           Phylum=taxmatrix_mod$Phylum,
+           completeness=bin_q$completeness)%>%
+  pivot_longer(cols = 1:ncol(dram[module])) %>% 
+  ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
+  geom_smooth(method = "lm",se=FALSE)+
+  facet_wrap(~name, scale = "free") +
   scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
 
@@ -161,11 +183,23 @@ data.frame(dram[etc])%>%
 
 # Barchart MAGs sorted by Phyla 
 data.frame(dram[etc],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),Phylum=taxmatrix_mod$Phylum)%>%
-  pivot_longer(cols = 1:ncol(dram[module])) %>% 
+  pivot_longer(cols = 1:ncol(dram[etc])) %>% 
   ggplot(aes(y=value,x=reorder(MAG,Phylum),fill=Phylum)) +
   geom_bar(stat = "identity")+
   facet_wrap(~name, scale = "free") +
   coord_cartesian(ylim = c(0,1))+
+  scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  theme_bw()
+
+# Module coverage vs MAG completeness (by Phylum) 
+data.frame(dram[etc],
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
+           Phylum=taxmatrix_mod$Phylum,
+           completeness=bin_q$completeness)%>%
+  pivot_longer(cols = 1:ncol(dram[etc])) %>% 
+  ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
+  geom_smooth(method = "lm",se=FALSE)+
+  facet_wrap(~name, scale = "free") +
   scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
 
@@ -224,6 +258,18 @@ data.frame(dram[cazy],MAG=factor(rownames(dram),levels = rownames(dram)[order(ta
   scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
 
+# Number of CAZYs vs MAG completeness (by Phylum) 
+data.frame(dram[cazy],
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
+           Phylum=taxmatrix_mod$Phylum,
+           completeness=bin_q$completeness)%>%
+  pivot_longer(cols = 1:ncol(dram[cazy])) %>% 
+  ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
+  geom_smooth(method = "lm",se=FALSE)+
+  facet_wrap(~name, scale = "free") +
+  scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  theme_bw()
+
 # Correlations between CAZYs (binary data)
 # Pearson correlation and tetrachoric correlation, an alternative that might be
 # more meaningful for binary data.
@@ -276,6 +322,18 @@ data.frame(dram[metab],MAG=factor(rownames(dram),levels = rownames(dram)[order(t
   geom_bar(stat = "identity")+
   facet_wrap(~Phylum, scale = "free") +
   coord_cartesian(ylim = c(0,8))+
+  scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  theme_bw()
+
+# Number of metab genes vs MAG completeness (by Phylum) 
+data.frame(dram[metab],
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
+           Phylum=taxmatrix_mod$Phylum,
+           completeness=bin_q$completeness)%>%
+  pivot_longer(cols = 1:ncol(dram[metab])) %>% 
+  ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
+  geom_smooth(method = "lm",se=FALSE)+
+  facet_wrap(~name, scale = "free") +
   scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
 
@@ -333,6 +391,19 @@ data.frame(dram[scfa],MAG=factor(rownames(dram),levels = rownames(dram)[order(ta
   coord_cartesian(ylim = c(0,9))+
   scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
+
+# Number of SCFAs vs MAG completeness (by Phylum) 
+data.frame(dram[scfa],
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
+           Phylum=taxmatrix_mod$Phylum,
+           completeness=bin_q$completeness)%>%
+  pivot_longer(cols = 1:ncol(dram[scfa])) %>% 
+  ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
+  geom_smooth(method = "lm",se=FALSE)+
+  facet_wrap(~name, scale = "free") +
+  scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
+  theme_bw()
+
 
 # Correlations between SCFAs (binary data)
 # Pearson correlation and tetrachoric correlation, an alternative that might be
