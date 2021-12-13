@@ -10,7 +10,7 @@ library(edgeR)
 ## ******************************************
 
 # Import metadata
-cat_metadata=read.csv("data/DomestiCAT metadata.csv")
+cat_metadata=read.csv("data/DomestiCAT_metadata.csv")
 head(cat_metadata)
 cat_metadata=cat_metadata[-c(96:98),]
 cat_metadata$CombinedID=gsub("_",".",cat_metadata$CombinedID)
@@ -146,7 +146,7 @@ MAG_nmds$stress # stress = 0.15
 MAG_nmds_scores=data.frame(MAG_nmds$points,group=factor(cat_metadata_red$Location))
 MAG_nmds_mean=aggregate(MAG_nmds_scores[,1:2],list(MAG_nmds_scores$group),mean)
 ## Function to make ellipses in plot
-veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100) 
+veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100)
 {
   theta <- (0:npoints) * 2 * pi/npoints
   Circle <- cbind(cos(theta), sin(theta))
@@ -167,10 +167,10 @@ windows(h=8,w=10)
 ggplot(MAG_nmds_scores,
        aes(x=MDS1,y=MDS2))+
   geom_point(aes(shape=as.factor(cat_metadata_red$Tame.Feral),
-                 color=as.factor(cat_metadata_red$Location)),size=4) + 
+                 color=as.factor(cat_metadata_red$Location)),size=4) +
   geom_path(data=df_ell, aes(x=MDS1, y=MDS2,color=group), size=1, linetype=2) +
-  colScale + 
-  shapeScale + 
+  colScale +
+  shapeScale +
   theme_bw()
 
 # Phylo and q = 1
@@ -181,7 +181,7 @@ MAG_nmds$stress # stress = 0.15
 MAG_nmds_scores=data.frame(MAG_nmds$points,group=factor(cat_metadata_red$Location))
 MAG_nmds_mean=aggregate(MAG_nmds_scores[,1:2],list(MAG_nmds_scores$group),mean)
 ## Function to make ellipses in plot
-veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100) 
+veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100)
 {
   theta <- (0:npoints) * 2 * pi/npoints
   Circle <- cbind(cos(theta), sin(theta))
@@ -202,10 +202,10 @@ windows(h=8,w=10)
 ggplot(MAG_nmds_scores,
        aes(x=MDS1,y=MDS2))+
   geom_point(aes(shape=as.factor(cat_metadata_red$Tame.Feral),
-                 color=as.factor(cat_metadata_red$Location)),size=4) + 
+                 color=as.factor(cat_metadata_red$Location)),size=4) +
   geom_path(data=df_ell, aes(x=MDS1, y=MDS2,color=group), size=1, linetype=2) +
-  colScale + 
-  shapeScale + 
+  colScale +
+  shapeScale +
   theme_bw()
 
 set.seed(1)
@@ -227,7 +227,7 @@ table_upset_analysis=data.frame(table_upset_analysis)
 table_upset_analysis=apply(table_upset_analysis,2,as.integer)
 
 upset(table_upset_analysis, sets = c("Aruba","Brazil","Cabo.Verde","Denmark",
-                       "Malaysia","Spain"), mb.ratio = c(0.55, 0.45), 
+                       "Malaysia","Spain"), mb.ratio = c(0.55, 0.45),
       order.by = "freq")
 
 ## All MAGs are globally widespread with 227 present in the 6 countries and
@@ -266,15 +266,15 @@ results[results$table$FDR<0.05,]
 
 rownames(cat_metadata_red)=cat_metadata_red$CombinedID
 MAGCounts_phyloseq_MAG_metadata=phyloseq(otu_table(MAGcounts_edger,taxa_are_rows = TRUE),sample_data(cat_metadata_red))
-out = ancombc(phyloseq = MAGCounts_phyloseq_MAG_metadata, formula = "Location + Tame.Feral", 
-              p_adj_method = "fdr",group = "Tame.Feral", tol = 1e-5, 
+out = ancombc(phyloseq = MAGCounts_phyloseq_MAG_metadata, formula = "Location + Tame.Feral",
+              p_adj_method = "fdr",group = "Tame.Feral", tol = 1e-5,
               max_iter = 100, conserve = TRUE, alpha = 0.05, global = TRUE)
 res = out$res
 res_global = out$res_global
 
 #Coefficients
 tab_coef = res$beta
-col_name = c("Brazil", "Cabo_Verde", "Denmark", "Malaysia", "Spain", 
+col_name = c("Brazil", "Cabo_Verde", "Denmark", "Malaysia", "Spain",
              "Tame")
 colnames(tab_coef) = col_name
 tab_coef$Tame
