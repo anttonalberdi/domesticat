@@ -236,3 +236,4 @@ summary(decideTests(qlf))
 #1 MAG was found to be of lower abundance in feral than domestic cats
 difMAGs <- results[results$table$FDR<0.05,]
 difMAGs <- cbind(as.data.frame(results[results$table$FDR<0.05,]),table_upset_analysis_cont[rownames(difMAGs),], taxonomy[rownames(difMAGs),], quality[rownames(difMAGs),])
+write.csv(difMAGs,"results/enrichment.csv")
