@@ -3,6 +3,8 @@
 
 #Load required libraries
 library(vegan)
+library(data.table)
+library(hilldiv)
 library(ggplot2)
 library(RColorBrewer)
 library(ape)
@@ -71,13 +73,14 @@ MAGrel = MAGrel[,!is.na(colSums(MAGrel))]
 MAGrel_t=data.frame(t(MAGrel))
 
 # Import phylo tree
-phylo_tree=read.newick("data/gtdbtk.bac120.classify.tree")
-phylo.tree=keep.tip(phylo_tree,colnames(MAGcounts_relL_rel_t))
-is.ultrametric(phylo.tree)
-phylo.tree=force.ultrametric(phylo.tree,method = "nnls")
-is.ultrametric(phylo.tree)
-write.tree(phylo.tree,"data/MAG.tree")
-plot(phylo.tree)
+#phylo_tree=read.newick("data/gtdbtk.bac120.classify.tree")
+#MAGtree=keep.tip(phylo_tree,colnames(MAGcounts_relL_rel_t))
+#is.ultrametric(MAGtree)
+#MAGtree=force.ultrametric(MAGtree,method = "nnls")
+#is.ultrametric(MAGtree)
+#write.tree(MAGtree,"data/MAG.tree")
+#plot(MAGtree)
+MAGtree=read.tree("data/MAG.tree")
 
 # Detect samples in the count table not present in metadata
 colnames(MAGrel)[which(!colnames(MAGrel)%in%cat_metadata$CombinedID)]
@@ -92,7 +95,61 @@ colnames(MAGrel_red)%in%cat_metadata_red$CombinedID
 cat_metadata_red=cat_metadata_red[match(colnames(MAGrel_red),cat_metadata_red$CombinedID),]
 colnames(MAGrel_red)==cat_metadata_red$CombinedID
 
-## 2. Analysis of MAG structure in cats
+## 2. MAG tree with quality annotations
+## ************************************
+
+library(ggtree)
+library(ggtreeExtra)
+library(phyloseq)
+library(dplyr)
+library(ape)
+
+MAGtree <- read.tree("data/MAG.tree")
+MAGinfo <- read.csv("data/MAG_info.csv")
+rownames(MAGinfo) <- MAGinfo[,1]
+
+phylumcolors <- c("#5b828e","#5e6668","#bbcfd7","#ba9a88","#ac7e62","#aca69f","#adab76","#666b3a","#0f211a","#012e67")
+
+base <- ggtree(tree, layout="circular", width=0.5) %<+% info +
+  geom_tippoint(aes(color=Phylum)) +
+  scale_color_manual(values=phylumcolors)
+
+qualitycolors <- c("#79ad9f","#193439","#d3b78f","#f4f4f4","#f4f4f4","#f4f4f4","#b37d5f","#503143")
+
+pdf("figures/MAGtree.pdf",width=5,height=5)
+gheatmap(base, MAGinfo[,c("Completeness","Contamination")], offset = 0, width=.1,
+        colnames_position="top",
+        colnames_angle=90, colnames_offset_y = 1,
+        hjust=0, font.size=2) +
+        scale_fill_gradientn(colours = qualitycolors) +
+        theme(legend.position="none")
+dev.off()
+
+## 3. Barplots clustered by sites
+## ************************************
+
+MAGrel_melt <- melt(as.matrix(MAGrel))
+MAGrel_melt <- merge(MAGrel_melt,cat_metadata,by.x="Var2",by.y="CombinedID")
+MAGrel_melt <- merge(MAGrel_melt,MAGinfo,by.x="Var1",by.y="row.names")
+colnames(MAGrel_melt)[1:3] <- c("MAG","Sample","Value")
+
+phylumcolors <- c("#5b828e","#5e6668","#bbcfd7","#ba9a88","#ac7e62","#aca69f","#adab76","#666b3a","#0f211a","#012e67")
+
+pdf("figures/MAGbarplot.pdf",width=8,height=4)
+ggplot(MAGrel_melt,aes(y=Value,x=Sample,fill=Phylum)) +
+  geom_bar(position="stack", stat="identity") +
+  scale_fill_manual(values=phylumcolors) +
+  facet_grid(~ Location,
+             scales = "free_x",
+             space = "free_x",
+             switch = "x") +
+  theme_minimal() +
+  theme(axis.text.x=element_blank(), panel.grid.major.x = element_blank())
+dev.off()
+
+
+
+## 3. Analysis of MAG structure in cats
 ## ************************************
 
 # Jaccard type overlap metric, Neutral, q=0
@@ -127,7 +184,7 @@ adonis(as.dist(MAG_dis_Neu_q1$L1_UqN)~Location*Origin,data = cat_metadata_red)
 
 
 # Jaccard tpe overlap metric, Phylo, q=0
-MAG_dis_Phy_q0=pair_dis(MAGrel_red,qvalue = 0,tree = phylo.tree)
+MAG_dis_Phy_q0=pair_dis(MAGrel_red,qvalue = 0,tree = MAGtree)
 saveRDS(MAG_dis_Phy_q0,file="results/MAG_dis_Phy_q0.rds")
 MAG_dis_Phy_q0=readRDS(file="results/MAG_dis_Phy_q0.rds")
 MAG_dis_Phy_q0$L1_UqN[upper.tri(MAG_dis_Phy_q0$L1_UqN)]=t(MAG_dis_Phy_q0$L1_UqN)[upper.tri(MAG_dis_Phy_q0$L1_UqN)]
@@ -142,7 +199,7 @@ anova(MAG_dist_Phy_q0_Origin_MHV)
 adonis(as.dist(MAG_dis_Phy_q0$L1_UqN)~Location*Origin,data = cat_metadata_red)
 
 # Jaccard tpe overlap metric, Phylo, q=1
-MAG_dis_Phy_q1=pair_dis(MAGrel_red,qvalue = 1,tree=phylo.tree)
+MAG_dis_Phy_q1=pair_dis(MAGrel_red,qvalue = 1,tree=MAGtree)
 saveRDS(MAG_dis_Phy_q1,file="results/MAG_dis_Phy_q1.rds")
 MAG_dis_Phy_q1=readRDS(file="results/MAG_dis_Phy_q1.rds")
 MAG_dis_Phy_q1$L1_UqN[upper.tri(MAG_dis_Phy_q1$L1_UqN)]=t(MAG_dis_Phy_q1$L1_UqN)[upper.tri(MAG_dis_Phy_q1$L1_UqN)]
