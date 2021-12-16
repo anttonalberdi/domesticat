@@ -68,6 +68,7 @@ MAGrel[1:6,1:6]
 
 #Remove incorrect samples
 MAGrel = MAGrel[,!is.na(colSums(MAGrel))]
+write.csv(MAGrel,"data/MAG_relative.csv")
 
 # Transpose the MAG table to have MAGs as columns and samples as rows
 MAGrel_t=data.frame(t(MAGrel))

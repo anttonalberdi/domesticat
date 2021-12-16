@@ -18,11 +18,13 @@ base <- ggtree(tree, layout="circular", width=0.5) %<+% info +
   geom_tippoint(aes(color=Phylum)) +
   scale_color_manual(values=phylumcolors)
 
-qualitycolors <- c("#79ad9f","#193439","#d3b78f","#b37d5f","#503143")
+qualitycolors <- c("#79ad9f","#193439","#d3b78f","#f4f4f4","#f4f4f4","#f4f4f4","#b37d5f","#503143")
 
+pdf("figures/MAGtree.pdf",width=5,height=5)
 gheatmap(base, MAGinfo[,c("Completeness","Contamination")], offset = 0, width=.1,
         colnames_position="top",
         colnames_angle=90, colnames_offset_y = 1,
         hjust=0, font.size=2) +
         scale_fill_gradientn(colours = qualitycolors) +
         theme(legend.position="none")
+dev.off()
