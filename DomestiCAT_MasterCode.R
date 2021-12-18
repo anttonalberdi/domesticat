@@ -13,6 +13,7 @@ library(UpSetR)
 library(edgeR)
 library(phyloseq)
 library(ANCOMBC)
+library(gridExtra)
 
 #Set working directory (specific to each user)
 setwd("/Users/anttonalberdi/github/domesticat/")
@@ -68,7 +69,6 @@ MAGrel[1:6,1:6]
 
 #Remove incorrect samples
 MAGrel = MAGrel[,!is.na(colSums(MAGrel))]
-write.csv(MAGrel,"data/MAG_relative.csv")
 
 # Transpose the MAG table to have MAGs as columns and samples as rows
 MAGrel_t=data.frame(t(MAGrel))
@@ -95,6 +95,11 @@ dim(cat_metadata_red)[1]==dim(MAGrel_red)[2]
 colnames(MAGrel_red)%in%cat_metadata_red$CombinedID
 cat_metadata_red=cat_metadata_red[match(colnames(MAGrel_red),cat_metadata_red$CombinedID),]
 colnames(MAGrel_red)==cat_metadata_red$CombinedID
+
+#Save curated data and metadata
+write.csv(MAGrel_red,"data/MAG_relative.csv")
+write.csv(cat_metadata_red,"data/DomestiCAT_metadata_curated.csv",row.names=FALSE)
+
 
 ## 2. MAG tree with quality annotations
 ## ************************************
@@ -129,6 +134,8 @@ dev.off()
 ## 3. Barplots clustered by sites
 ## ************************************
 
+MAGrel <- read.csv("data/MAG_relative.csv",row.names=1)
+cat_metadata <- read.csv("data/DomestiCAT_metadata_curated.csv")
 MAGrel_melt <- melt(as.matrix(MAGrel))
 MAGrel_melt <- merge(MAGrel_melt,cat_metadata,by.x="Var2",by.y="CombinedID")
 MAGrel_melt <- merge(MAGrel_melt,MAGinfo,by.x="Var1",by.y="row.names")
@@ -148,12 +155,87 @@ ggplot(MAGrel_melt,aes(y=Value,x=Sample,fill=Phylum)) +
   theme(axis.text.x=element_blank(), panel.grid.major.x = element_blank())
 dev.off()
 
-
-
-## 3. Analysis of MAG structure in cats
+## 4. Diversity plots by location and sequencing depth
 ## ************************************
 
-# Jaccard type overlap metric, Neutral, q=0
+MAGtree <- read.tree("data/MAG.tree")
+alpha_diversities <- cbind(hill_div(MAGrel,qvalue=0),hill_div(MAGrel,qvalue=1),hill_div(MAGrel,qvalue=0,tree=MAGtree),hill_div(MAGrel,qvalue=1,tree=MAGtree))
+colnames(alpha_diversities) <- c("dR", "dRE", "dRR", "dRER")
+alpha_diversities <- merge(alpha_diversities,cat_metadata,by.x="row.names",by.y="CombinedID")
+alpha_diversities <- merge(alpha_diversities,t(t(colSums(MAGcounts))),by.x="Row.names",by.y="row.names")
+colnames(alpha_diversities)[ncol(alpha_diversities)] <- "Depth"
+
+locationcolors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
+
+#Diversities per location
+div_dR <- ggplot(alpha_diversities, aes(x=Location, y=dR, color=Location)) +
+  geom_jitter(position=position_jitter(0.2)) +
+  scale_color_manual(values=locationcolors) +
+  theme_classic() +
+  theme(axis.title.x=element_blank(), axis.text.x=element_blank(), legend.position = "none")
+
+div_dRE <- ggplot(alpha_diversities, aes(x=Location, y=dRE, color=Location)) +
+  geom_jitter(position=position_jitter(0.2)) +
+  scale_color_manual(values=locationcolors) +
+  theme_classic() +
+  theme(axis.title.x=element_blank(), axis.text.x=element_blank(), legend.position = "none")
+
+div_dRR <- ggplot(alpha_diversities, aes(x=Location, y=dRR, color=Location)) +
+  geom_jitter(position=position_jitter(0.2)) +
+  scale_color_manual(values=locationcolors) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), axis.title.x=element_blank(), legend.position = "none")
+
+div_dRER <- ggplot(alpha_diversities, aes(x=Location, y=dRER, color=Location)) +
+  geom_jitter(position=position_jitter(0.2)) +
+  scale_color_manual(values=locationcolors) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), axis.title.x=element_blank(), legend.position = "none")
+
+pdf("figures/diversities.pdf",width=8,height=6)
+grid.arrange(div_dR, div_dRE, div_dRR, div_dRER, nrow=2, ncol=2,heights=c(2,2.5))
+dev.off()
+
+#By sequencing depth (reads mapped to MAG catalogue)
+div_depth_dR <- ggplot(alpha_diversities, aes(x=dR, y=Depth, color=Location)) +
+  geom_point() +
+  scale_color_manual(values=locationcolors) +
+  geom_line(stat="smooth",method = "lm", formula = y ~ x, size = 1, alpha = 0.2) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+div_depth_dRE <- ggplot(alpha_diversities, aes(x=dRE, y=Depth, color=Location)) +
+  geom_point() +
+  scale_color_manual(values=locationcolors) +
+  geom_line(stat="smooth",method = "lm", formula = y ~ x, size = 1, alpha = 0.2) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+div_depth_dRR <- ggplot(alpha_diversities, aes(x=dRR, y=Depth, color=Location)) +
+  geom_point() +
+  scale_color_manual(values=locationcolors) +
+  geom_line(stat="smooth",method = "lm", formula = y ~ x, size = 1, alpha = 0.2) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+div_depth_dRER <- ggplot(alpha_diversities, aes(x=dRER, y=Depth, color=Location)) +
+  geom_point() +
+  scale_color_manual(values=locationcolors) +
+  geom_line(stat="smooth",method = "lm", formula = y ~ x, size = 1, alpha = 0.2) +
+  theme_classic() +
+  theme(legend.position = "none")
+
+  pdf("figures/diversity_depth.pdf",width=8,height=6)
+  grid.arrange(div_depth_dR, div_depth_dRE, div_depth_dRR, div_depth_dRER, nrow=2, ncol=2,heights=c(2,2.5))
+  dev.off()
+
+## 5. Analysis of MAG structure in cats
+## ************************************
+
+# Jaccard type overlap metric
+# Antton would not rely on dR and dRR for being too dependent on read-depth
+
+# dR
 MAG_dis_Neu_q0=pair_dis(MAGrel_red, qvalue=0)
 saveRDS(MAG_dis_Neu_q0,file="results/MAG_dis_Neu_q0.rds")
 MAG_dis_Neu_q0=readRDS(file = "results/MAG_dis_Neu_q0.rds")
@@ -168,7 +250,7 @@ permutest(MAG_dist_Neu_q0_Origin_MHV)
 
 adonis(as.dist(MAG_dis_Neu_q0$L1_UqN)~Location*Origin,data = cat_metadata_red)
 
-# Jaccard tpe overlap metric, Neutral, q=1
+# dRE
 MAG_dis_Neu_q1=pair_dis(MAGrel_red,qvalue = 1)
 saveRDS(MAG_dis_Neu_q1,file="results/MAG_dis_Neu_q1.rds")
 MAG_dis_Neu_q1=readRDS(file="results/MAG_dis_Neu_q1.rds")
@@ -183,8 +265,7 @@ anova(MAG_dist_Neu_q1_Origin_MHV)
 
 adonis(as.dist(MAG_dis_Neu_q1$L1_UqN)~Location*Origin,data = cat_metadata_red)
 
-
-# Jaccard tpe overlap metric, Phylo, q=0
+# dRR
 MAG_dis_Phy_q0=pair_dis(MAGrel_red,qvalue = 0,tree = MAGtree)
 saveRDS(MAG_dis_Phy_q0,file="results/MAG_dis_Phy_q0.rds")
 MAG_dis_Phy_q0=readRDS(file="results/MAG_dis_Phy_q0.rds")
@@ -199,7 +280,7 @@ anova(MAG_dist_Phy_q0_Origin_MHV)
 
 adonis(as.dist(MAG_dis_Phy_q0$L1_UqN)~Location*Origin,data = cat_metadata_red)
 
-# Jaccard tpe overlap metric, Phylo, q=1
+# dRER
 MAG_dis_Phy_q1=pair_dis(MAGrel_red,qvalue = 1,tree=MAGtree)
 saveRDS(MAG_dis_Phy_q1,file="results/MAG_dis_Phy_q1.rds")
 MAG_dis_Phy_q1=readRDS(file="results/MAG_dis_Phy_q1.rds")
@@ -214,9 +295,14 @@ anova(MAG_dist_Phy_q1_Origin_MHV)
 
 adonis(as.dist(MAG_dis_Phy_q1$L1_UqN)~Location*Origin,data = cat_metadata_red)
 
-# Neutral and q = 1
+# Ordination plot by location
+
+locationcolors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
+
+#dRER
 set.seed(1)
-MAG_nmds=metaMDS(MAG_dis_Neu_q1$L1_UqN,k=2)
+dissimilarity=readRDS(file="results/MAG_dis_Phy_q1.rds")
+MAG_nmds=metaMDS(dissimilarity$L1_UqN,k=2)
 MAG_nmds$stress # stress = 0.15
 MAG_nmds_scores=data.frame(MAG_nmds$points,group=factor(cat_metadata_red$Location))
 MAG_nmds_mean=aggregate(MAG_nmds_scores[,1:2],list(MAG_nmds_scores$group),mean)
@@ -230,38 +316,42 @@ veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100)
 
 df_ell <- data.frame()
 for(g in levels(MAG_nmds_scores$group)){
-  df_ell <- rbind(df_ell, cbind(as.data.frame(with(MAG_nmds_scores[MAG_nmds_scores$group==g,],
-                                                   veganCovEllipse(cov.wt(cbind(MDS1,MDS2),wt=rep(1/length(MDS1),length(MDS1)))$cov,center=c(mean(MDS1),mean(MDS2)))))
-                                ,group=g))
-}
-myColors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
+  df_ell <- rbind(df_ell, cbind(as.data.frame(with(MAG_nmds_scores[MAG_nmds_scores$group==g,], veganCovEllipse(cov.wt(cbind(MDS1,MDS2),wt=rep(1/length(MDS1),length(MDS1)))$cov,center=c(mean(MDS1),mean(MDS2))))) ,group=g))}
 names(myColors)=levels(cat_metadata_red$Location)
-colScale=scale_colour_manual(name = "Location",values = myColors)
-shapeScale=scale_shape_manual(name="Origin",values = c(1,16))
+colScale=scale_colour_manual(name = "Location",values = locationcolors)
 windows(h=8,w=10)
+
+pdf("figures/NMDS_dRER.pdf",width=8,height=6)
 ggplot(MAG_nmds_scores,
        aes(x=MDS1,y=MDS2))+
-  geom_point(aes(shape=as.factor(cat_metadata_red$Origin),
-                 color=as.factor(cat_metadata_red$Location)),size=3) +
+  geom_point(aes(color=as.factor(cat_metadata_red$Location)),size=2) +
   geom_path(data=df_ell, aes(x=MDS1, y=MDS2,color=group), size=0.5, linetype=2) +
   colScale +
-  shapeScale +
   theme_bw()
+dev.off()
 
-## 3. MAGs in different location and shared among locations
+## 6. MAGs in different location and shared among locations
 ## ********************************************************
 
-MAGcounts_pa=1*(MAGcounts_relL_rel_red>0)
-MAGcounts_pa[1:6,1:6]
-table_upset_analysis_cont=t(aggregate(t(MAGcounts_pa),by=list(cat_metadata_red$Location),FUN=sum)[,-1])
+locationcolors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
+
+MAGrel <- read.csv("data/MAG_relative.csv",row.names=1)
+MAGrel_pa=1*(MAGrel>0)
+MAGrel_pa[1:6,1:6]
+table_upset_analysis_cont=t(aggregate(t(MAGrel_pa),by=list(cat_metadata_red$Location),FUN=sum)[,-1])
 colnames(table_upset_analysis_cont)=levels(as.factor(cat_metadata_red$Location))
 table_upset_analysis=(table_upset_analysis_cont>0)*1
 table_upset_analysis=data.frame(table_upset_analysis)
 table_upset_analysis=apply(table_upset_analysis,2,as.integer)
 rownames(table_upset_analysis) <- rownames(MAGcounts_pa)
 
-upset(as.data.frame(table_upset_analysis), sets = c("Aruba","Brazil","CaboVerde","Denmark","Malaysia","Spain"), mb.ratio = c(0.55, 0.45), order.by = "freq")
-
+pdf("figures/MAG_intersection.pdf",width=8,height=6, onefile=F)
+upset(as.data.frame(table_upset_analysis),
+  keep.order = T,
+  sets = rev(c("Aruba","Brazil","CaboVerde","Denmark","Malaysia","Spain")),
+  sets.bar.color= rev(locationcolors),
+  mb.ratio = c(0.55, 0.45), order.by = "freq")
+dev.off()
 
 ## 4. Enrichment analysis between Domestic/Feral
 ## *****************************************
