@@ -171,25 +171,25 @@ colnames(alpha_diversities)[ncol(alpha_diversities)] <- "Depth"
 locationcolors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
 
 #Diversities per location
-div_dR <- ggplot(alpha_diversities, aes(x=Location, y=dR, color=Location)) +
+div_dR <- ggplot(alpha_diversities, aes(x=Location, y=dR, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(), legend.position = "none")
 
-div_dRE <- ggplot(alpha_diversities, aes(x=Location, y=dRE, color=Location)) +
+div_dRE <- ggplot(alpha_diversities, aes(x=Location, y=dRE, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(), legend.position = "none")
 
-div_dRR <- ggplot(alpha_diversities, aes(x=Location, y=dRR, color=Location)) +
+div_dRR <- ggplot(alpha_diversities, aes(x=Location, y=dRR, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), axis.title.x=element_blank(), legend.position = "none")
 
-div_dRER <- ggplot(alpha_diversities, aes(x=Location, y=dRER, color=Location)) +
+div_dRER <- ggplot(alpha_diversities, aes(x=Location, y=dRER, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +

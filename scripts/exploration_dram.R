@@ -24,12 +24,12 @@ rownames(taxonomyclean1) <- taxonomyclean[,1]
 taxmatrix <- as.matrix(taxonomyclean1[1:7])
 
 # Pool Firmicutes A,B C into Firmicutes
-taxmatrix_mod=data.frame(taxmatrix)
+# taxmatrix_mod=data.frame(taxmatrix)
 # taxmatrix_mod$Phylum[grepl("Firmi",taxmatrix_mod$Phylum)]="Firmicutes"
 
 # Load phylogenetic tree
 phylo_tree=read.newick("data/gtdbtk.bac120.classify.tree")
-phylo.tree=drop.tip(phylo_tree,phylo_tree$tip.label[-match(colnames(MAGcounts_relL_hel), phylo_tree$tip.label)])
+phylo.tree=drop.tip(phylo_tree,phylo_tree$tip.label[-match(rownames(taxmatrix), phylo_tree$tip.label)])
 is.ultrametric(phylo.tree)
 phylo.tree=force.ultrametric(phylo.tree,method = "nnls")
 is.ultrametric(phylo.tree)
