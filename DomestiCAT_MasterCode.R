@@ -116,7 +116,7 @@ rownames(MAGinfo) <- MAGinfo[,1]
 
 phylumcolors <- c("#5b828e","#5e6668","#bbcfd7","#ba9a88","#ac7e62","#aca69f","#adab76","#666b3a","#0f211a","#012e67")
 
-base <- ggtree(tree, layout="circular", width=0.5) %<+% info +
+base <- ggtree(MAGtree, layout="circular", width=0.5) %<+% MAGinfo +
   geom_tippoint(aes(color=Phylum)) +
   scale_color_manual(values=phylumcolors)
 
@@ -141,10 +141,13 @@ MAGrel_melt <- merge(MAGrel_melt,cat_metadata,by.x="Var2",by.y="CombinedID")
 MAGrel_melt <- merge(MAGrel_melt,MAGinfo,by.x="Var1",by.y="row.names")
 colnames(MAGrel_melt)[1:3] <- c("MAG","Sample","Value")
 
+#MAG variable is duplicated in MAGrel_melt
+MAGrel_melt<-MAGrel_melt[,-31]
+
 phylumcolors <- c("#5b828e","#5e6668","#bbcfd7","#ba9a88","#ac7e62","#aca69f","#adab76","#666b3a","#0f211a","#012e67")
 
 pdf("figures/MAGbarplot.pdf",width=8,height=4)
-ggplot(MAGrel_melt,aes(y=Value,x=Sample,fill=Phylum)) +
+ggplot(MAGrel_melt[,-31],aes(y=Value,x=Sample,fill=Phylum)) +
   geom_bar(position="stack", stat="identity") +
   scale_fill_manual(values=phylumcolors) +
   facet_grid(~ Location,
@@ -168,25 +171,25 @@ colnames(alpha_diversities)[ncol(alpha_diversities)] <- "Depth"
 locationcolors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
 
 #Diversities per location
-div_dR <- ggplot(alpha_diversities, aes(x=Location, y=dR, color=Location)) +
+div_dR <- ggplot(alpha_diversities, aes(x=Location, y=dR, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(), legend.position = "none")
 
-div_dRE <- ggplot(alpha_diversities, aes(x=Location, y=dRE, color=Location)) +
+div_dRE <- ggplot(alpha_diversities, aes(x=Location, y=dRE, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
   theme(axis.title.x=element_blank(), axis.text.x=element_blank(), legend.position = "none")
 
-div_dRR <- ggplot(alpha_diversities, aes(x=Location, y=dRR, color=Location)) +
+div_dRR <- ggplot(alpha_diversities, aes(x=Location, y=dRR, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), axis.title.x=element_blank(), legend.position = "none")
 
-div_dRER <- ggplot(alpha_diversities, aes(x=Location, y=dRER, color=Location)) +
+div_dRER <- ggplot(alpha_diversities, aes(x=Location, y=dRER, color=Location,shape=Origin)) +
   geom_jitter(position=position_jitter(0.2)) +
   scale_color_manual(values=locationcolors) +
   theme_classic() +
@@ -301,9 +304,8 @@ locationcolors=c('#c4d7d1','#408892','#2d3749','#c04062','#6b3a59','#e08683')
 
 #dRER
 set.seed(1)
-dissimilarity=readRDS(file="results/MAG_dis_Phy_q1.rds")
-MAG_nmds=metaMDS(dissimilarity$L1_UqN,k=2)
-MAG_nmds$stress # stress = 0.15
+MAG_nmds=metaMDS(MAG_dis_Phy_q1$L1_UqN,k=2)
+MAG_nmds$stress # stress = 0.19
 MAG_nmds_scores=data.frame(MAG_nmds$points,group=factor(cat_metadata_red$Location))
 MAG_nmds_mean=aggregate(MAG_nmds_scores[,1:2],list(MAG_nmds_scores$group),mean)
 ## Function to make ellipses in plot
@@ -317,7 +319,7 @@ veganCovEllipse<-function (cov, center = c(0, 0), scale = 1, npoints = 100)
 df_ell <- data.frame()
 for(g in levels(MAG_nmds_scores$group)){
   df_ell <- rbind(df_ell, cbind(as.data.frame(with(MAG_nmds_scores[MAG_nmds_scores$group==g,], veganCovEllipse(cov.wt(cbind(MDS1,MDS2),wt=rep(1/length(MDS1),length(MDS1)))$cov,center=c(mean(MDS1),mean(MDS2))))) ,group=g))}
-names(myColors)=levels(cat_metadata_red$Location)
+names(locationcolors)=levels(cat_metadata_red$Location)
 colScale=scale_colour_manual(name = "Location",values = locationcolors)
 windows(h=8,w=10)
 

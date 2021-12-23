@@ -21,19 +21,21 @@ taxonomyclean1 <- taxonomyclean[,-1]
 rownames(taxonomyclean1) <- taxonomyclean[,1]
 
 # Get the necessary columns, convert to matrix
-taxmatrix <- as.matrix(taxonomyclean1[1:7])
+taxmatrix <- as.data.frame(taxonomyclean1[1:7])
+
 
 # Pool Firmicutes A,B C into Firmicutes
-taxmatrix_mod=data.frame(taxmatrix)
+# taxmatrix_mod=data.frame(taxmatrix)
 # taxmatrix_mod$Phylum[grepl("Firmi",taxmatrix_mod$Phylum)]="Firmicutes"
 
 # Load phylogenetic tree
 phylo_tree=read.newick("data/gtdbtk.bac120.classify.tree")
-phylo.tree=drop.tip(phylo_tree,phylo_tree$tip.label[-match(colnames(MAGcounts_relL_hel), phylo_tree$tip.label)])
+phylo.tree=drop.tip(phylo_tree,phylo_tree$tip.label[-match(rownames(taxmatrix), phylo_tree$tip.label)])
 is.ultrametric(phylo.tree)
 phylo.tree=force.ultrametric(phylo.tree,method = "nnls")
 is.ultrametric(phylo.tree)
 plot(phylo.tree)
+
 # Load DRAM data
 DRAM_data=read.delim("data/DRAM_product.tsv",sep='\t')
 dim(DRAM_data)
@@ -89,18 +91,15 @@ colnames(DRAM[,colSums(DRAM)==0])
 dram=DRAM[,colSums(DRAM)>0]
 
 # MAGs in taxonomy table and dram table in same order.
-mean(rownames(dram)==rownames(taxmatrix_mod))
+mean(rownames(dram)==rownames(taxmatrix))
 
 # Load bin quality data
-bin_q=read.csv("data/All_drep_bin_quality.csv")
-bin_q$genome=gsub(".fa","",bin_q$genome)
-bin_q=bin_q[bin_q$genome%in%rownames(dram),]
-bin_q=bin_q[match(rownames(dram),bin_q$genome),]
+bin_q=read.csv("data/MAG_info.csv")
 
 # Barchart of bin qualities per Phylum
-data.frame(MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
-           Phylum=taxmatrix_mod$Phylum,
-           completeness=bin_q$completeness)%>%
+data.frame(MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),
+           Phylum=taxmatrix$Phylum,
+           completeness=bin_q$Completeness)%>%
   ggplot(aes(y=completeness,x=MAG,fill=Phylum,color=Phylum)) +
   geom_bar(stat = "identity")+
   scale_fill_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
@@ -126,7 +125,7 @@ data.frame(dram[module])%>%
   theme_bw()
 
 # Barchart MAGs sorted by Phyla 
-data.frame(dram[module],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),Phylum=taxmatrix_mod$Phylum)%>%
+data.frame(dram[module],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),Phylum=taxmatrix$Phylum)%>%
   pivot_longer(cols = 1:ncol(dram[module])) %>% 
   ggplot(aes(y=value,x=reorder(MAG,Phylum),fill=Phylum)) +
   geom_bar(stat = "identity")+
@@ -137,9 +136,9 @@ data.frame(dram[module],MAG=factor(rownames(dram),levels = rownames(dram)[order(
 
 # Module coverage vs MAG completeness (by Phylum) 
 data.frame(dram[module],
-           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
-           Phylum=taxmatrix_mod$Phylum,
-           completeness=bin_q$completeness)%>%
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),
+           Phylum=taxmatrix$Phylum,
+           completeness=bin_q$Completeness)%>%
   pivot_longer(cols = 1:ncol(dram[module])) %>% 
   ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
   geom_smooth(method = "lm",se=FALSE)+
@@ -172,7 +171,7 @@ fviz_pca_biplot(module_pca,
                 pointshape = 21,
                 pointsize = 3,
                 col.ind = "black",
-                fill.ind = taxmatrix_mod$Phylum,  # Individuals color
+                fill.ind = taxmatrix$Phylum,  # Individuals color
                 palette=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"),
                 # col.var = "blue", # Variables color
                 mean.point = FALSE,
@@ -192,7 +191,7 @@ data.frame(dram[etc])%>%
   theme_bw()
 
 # Barchart MAGs sorted by Phyla 
-data.frame(dram[etc],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),Phylum=taxmatrix_mod$Phylum)%>%
+data.frame(dram[etc],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),Phylum=taxmatrix$Phylum)%>%
   pivot_longer(cols = 1:ncol(dram[etc])) %>% 
   ggplot(aes(y=value,x=reorder(MAG,Phylum),fill=Phylum)) +
   geom_bar(stat = "identity")+
@@ -203,8 +202,8 @@ data.frame(dram[etc],MAG=factor(rownames(dram),levels = rownames(dram)[order(tax
 
 # Module coverage vs MAG completeness (by Phylum) 
 data.frame(dram[etc],
-           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
-           Phylum=taxmatrix_mod$Phylum,
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),
+           Phylum=taxmatrix$Phylum,
            completeness=bin_q$completeness)%>%
   pivot_longer(cols = 1:ncol(dram[etc])) %>% 
   ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
@@ -238,7 +237,7 @@ fviz_pca_biplot(module_pca,
                 pointshape = 21,
                 pointsize = 3,
                 col.ind = "black",
-                fill.ind = taxmatrix_mod$Phylum,  # Individuals color
+                fill.ind = taxmatrix$Phylum,  # Individuals color
                 palette=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"),
                 # col.var = "blue", # Variables color
                 mean.point = FALSE,
@@ -259,7 +258,7 @@ dram[cazy] %>%
   theme_bw()
 
 # Barchart of number of cazy-s in MAGs, sorted by Phyla 
-data.frame(dram[cazy],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),Phylum=taxmatrix_mod$Phylum)%>%
+data.frame(dram[cazy],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),Phylum=taxmatrix$Phylum)%>%
   pivot_longer(cols = 1:ncol(dram[cazy])) %>% 
   ggplot(aes(y=value,x=reorder(MAG,Phylum),fill=Phylum)) +
   geom_bar(stat = "identity")+
@@ -270,9 +269,9 @@ data.frame(dram[cazy],MAG=factor(rownames(dram),levels = rownames(dram)[order(ta
 
 # Number of CAZYs vs MAG completeness (by Phylum) 
 data.frame(dram[cazy],
-           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
-           Phylum=taxmatrix_mod$Phylum,
-           completeness=bin_q$completeness)%>%
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),
+           Phylum=taxmatrix$Phylum,
+           completeness=bin_q$Completeness)%>%
   pivot_longer(cols = 1:ncol(dram[cazy])) %>% 
   ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
   geom_smooth(method = "lm",se=FALSE)+
@@ -308,7 +307,7 @@ ggcorrplot(cor_tetra,
 logpca_cv = cv.lpca(dram[cazy], ks = 2, ms = 1:10)
 plot(logpca_cv)
 logpca_model = logisticPCA(dram[cazy], k = 2, m = which.min(logpca_cv))
-plot(logpca_model,"scores")+geom_point(aes(colour = taxmatrix_mod$Phylum),size=4)+
+plot(logpca_model,"scores")+geom_point(aes(colour = taxmatrix$Phylum),size=4)+
   scale_color_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
 
@@ -326,7 +325,7 @@ dram[metab] %>%
   theme_bw()
 
 # Barchart of number of metab pathways in MAGs, sorted by Phyla
-data.frame(dram[metab],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),Phylum=taxmatrix_mod$Phylum)%>%
+data.frame(dram[metab],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),Phylum=taxmatrix$Phylum)%>%
   pivot_longer(cols = 1:ncol(dram[metab])) %>% 
   ggplot(aes(y=value,x=reorder(MAG,Phylum),fill=Phylum)) +
   geom_bar(stat = "identity")+
@@ -337,9 +336,9 @@ data.frame(dram[metab],MAG=factor(rownames(dram),levels = rownames(dram)[order(t
 
 # Number of metab genes vs MAG completeness (by Phylum) 
 data.frame(dram[metab],
-           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
-           Phylum=taxmatrix_mod$Phylum,
-           completeness=bin_q$completeness)%>%
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),
+           Phylum=taxmatrix$Phylum,
+           completeness=bin_q$Completeness)%>%
   pivot_longer(cols = 1:ncol(dram[metab])) %>% 
   ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
   geom_smooth(method = "lm",se=FALSE)+
@@ -375,7 +374,7 @@ ggcorrplot(cor_tetra,
 logpca_cv = cv.lpca(dram[metab], ks = 2, ms = 1:10)
 plot(logpca_cv)
 logpca_model = logisticPCA(dram[metab], k = 2, m = which.min(logpca_cv))
-plot(logpca_model,"scores")+geom_point(aes(colour = taxmatrix_mod$Phylum),size=4)+
+plot(logpca_model,"scores")+geom_point(aes(colour = taxmatrix$Phylum),size=4)+
   scale_color_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
 
@@ -393,7 +392,7 @@ dram[scfa] %>%
   theme_bw()
 
 # Barchart of number of scfa-s in MAGs, sorted by Phyla 
-data.frame(dram[scfa],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),Phylum=taxmatrix_mod$Phylum)%>%
+data.frame(dram[scfa],MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),Phylum=taxmatrix$Phylum)%>%
   pivot_longer(cols = 1:ncol(dram[scfa])) %>% 
   ggplot(aes(y=value,x=reorder(MAG,Phylum),fill=Phylum)) +
   geom_bar(stat = "identity")+
@@ -404,9 +403,9 @@ data.frame(dram[scfa],MAG=factor(rownames(dram),levels = rownames(dram)[order(ta
 
 # Number of SCFAs vs MAG completeness (by Phylum) 
 data.frame(dram[scfa],
-           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix_mod$Phylum)]),
-           Phylum=taxmatrix_mod$Phylum,
-           completeness=bin_q$completeness)%>%
+           MAG=factor(rownames(dram),levels = rownames(dram)[order(taxmatrix$Phylum)]),
+           Phylum=taxmatrix$Phylum,
+           completeness=bin_q$Completeness)%>%
   pivot_longer(cols = 1:ncol(dram[scfa])) %>% 
   ggplot(aes(y=value,x=completeness,fill=Phylum,color=Phylum)) +
   geom_smooth(method = "lm",se=FALSE)+
@@ -443,6 +442,6 @@ ggcorrplot(cor_tetra,
 logpca_cv = cv.lpca(dram[scfa], ks = 2, ms = 1:10)
 plot(logpca_cv)
 logpca_model = logisticPCA(dram[scfa], k = 2, m = which.min(logpca_cv))
-plot(logpca_model,"scores")+geom_point(aes(colour = taxmatrix_mod$Phylum),size=4)+
+plot(logpca_model,"scores")+geom_point(aes(colour = taxmatrix$Phylum),size=4)+
   scale_color_manual(values=c("#a6cee3","#1f78b4","#b2df8a","#33a02c","#fb9a99","#e31a1c","#fdbf6f","#ff7f00","#cab2d6","#6a3d9a"))+
   theme_bw()
