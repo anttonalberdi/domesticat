@@ -14,6 +14,7 @@ library(edgeR)
 library(phyloseq)
 library(ANCOMBC)
 library(gridExtra)
+library(ggh4x)
 
 #Set working directory (specific to each user)
 setwd("/Users/anttonalberdi/github/domesticat/")
@@ -146,16 +147,19 @@ MAGrel_melt<-MAGrel_melt[,-31]
 
 phylumcolors <- c("#5b828e","#5e6668","#bbcfd7","#ba9a88","#ac7e62","#aca69f","#adab76","#666b3a","#0f211a","#012e67")
 
-pdf("figures/MAGbarplot.pdf",width=8,height=4)
+pdf("figures/MAGbarplot.pdf",width=12,height=5)
 ggplot(MAGrel_melt[,-31],aes(y=Value,x=Sample,fill=Phylum)) +
-  geom_bar(position="stack", stat="identity") +
+  geom_bar(position="stack", stat="identity",width = 0.9) +
   scale_fill_manual(values=phylumcolors) +
-  facet_grid(~ Location,
+  facet_nested(~ Location + Origin,
              scales = "free_x",
-             space = "free_x",
-             switch = "x") +
+             space = "free_x") +
   theme_minimal() +
-  theme(axis.text.x=element_blank(), panel.grid.major.x = element_blank())
+  theme(axis.text.x=element_blank(), 
+        panel.grid.major.x = element_blank(),
+        axis.title.x = element_blank(),
+        panel.spacing=unit(0,"lines"),
+        strip.background=element_rect(color="grey30"))
 dev.off()
 
 ## 4. Diversity plots by location and sequencing depth
@@ -267,6 +271,25 @@ MAG_dist_Neu_q1_Origin_MHV<-betadisper(as.dist(MAG_dis_Neu_q1$L1_UqN),cat_metada
 anova(MAG_dist_Neu_q1_Origin_MHV)
 
 adonis(as.dist(MAG_dis_Neu_q1$L1_UqN)~Location*Origin,data = cat_metadata_red)
+Aruba_Neu_q1=MAG_dis_Neu_q1$L1_UqN[cat_metadata_red$Location=="Aruba",cat_metadata_red$Location=="Aruba"]
+cat_metadata_Aruba=cat_metadata_red[cat_metadata_red$Location=="Aruba",]
+adonis(as.dist(Aruba_Neu_q1)~Origin,data = cat_metadata_Aruba)
+Brazil_Neu_q1=MAG_dis_Neu_q1$L1_UqN[cat_metadata_red$Location=="Brazil",cat_metadata_red$Location=="Brazil"]
+cat_metadata_Brazil=cat_metadata_red[cat_metadata_red$Location=="Brazil",]
+adonis(as.dist(Brazil_Neu_q1)~Origin,data = cat_metadata_Brazil)
+CaboVerde_Neu_q1=MAG_dis_Neu_q1$L1_UqN[cat_metadata_red$Location=="CaboVerde",cat_metadata_red$Location=="CaboVerde"]
+cat_metadata_CaboVerde=cat_metadata_red[cat_metadata_red$Location=="CaboVerde",]
+adonis(as.dist(CaboVerde_Neu_q1)~Origin,data = cat_metadata_CaboVerde)
+Denmark_Neu_q1=MAG_dis_Neu_q1$L1_UqN[cat_metadata_red$Location=="Denmark",cat_metadata_red$Location=="Denmark"]
+cat_metadata_Denmark=cat_metadata_red[cat_metadata_red$Location=="Denmark",]
+adonis(as.dist(Denmark_Neu_q1)~Origin,data = cat_metadata_Denmark)
+Malaysia_Neu_q1=MAG_dis_Neu_q1$L1_UqN[cat_metadata_red$Location=="Malaysia",cat_metadata_red$Location=="Malaysia"]
+cat_metadata_Malaysia=cat_metadata_red[cat_metadata_red$Location=="Malaysia",]
+adonis(as.dist(Malaysia_Neu_q1)~Origin,data = cat_metadata_Malaysia)
+Spain_Neu_q1=MAG_dis_Neu_q1$L1_UqN[cat_metadata_red$Location=="Spain",cat_metadata_red$Location=="Spain"]
+cat_metadata_Spain=cat_metadata_red[cat_metadata_red$Location=="Spain",]
+adonis(as.dist(Spain_Neu_q1)~Origin,data = cat_metadata_Spain)
+
 
 # dRR
 MAG_dis_Phy_q0=pair_dis(MAGrel_red,qvalue = 0,tree = MAGtree)
@@ -297,6 +320,24 @@ MAG_dist_Phy_q1_Origin_MHV<-betadisper(as.dist(MAG_dis_Phy_q1$L1_UqN),cat_metada
 anova(MAG_dist_Phy_q1_Origin_MHV)
 
 adonis(as.dist(MAG_dis_Phy_q1$L1_UqN)~Location*Origin,data = cat_metadata_red)
+Aruba_Phy_q1=MAG_dis_Phy_q1$L1_UqN[cat_metadata_red$Location=="Aruba",cat_metadata_red$Location=="Aruba"]
+cat_metadata_Aruba=cat_metadata_red[cat_metadata_red$Location=="Aruba",]
+adonis(as.dist(Aruba_Phy_q1)~Origin,data = cat_metadata_Aruba)
+Brazil_Phy_q1=MAG_dis_Phy_q1$L1_UqN[cat_metadata_red$Location=="Brazil",cat_metadata_red$Location=="Brazil"]
+cat_metadata_Brazil=cat_metadata_red[cat_metadata_red$Location=="Brazil",]
+adonis(as.dist(Brazil_Phy_q1)~Origin,data = cat_metadata_Brazil)
+CaboVerde_Phy_q1=MAG_dis_Phy_q1$L1_UqN[cat_metadata_red$Location=="CaboVerde",cat_metadata_red$Location=="CaboVerde"]
+cat_metadata_CaboVerde=cat_metadata_red[cat_metadata_red$Location=="CaboVerde",]
+adonis(as.dist(CaboVerde_Phy_q1)~Origin,data = cat_metadata_CaboVerde)
+Denmark_Phy_q1=MAG_dis_Phy_q1$L1_UqN[cat_metadata_red$Location=="Denmark",cat_metadata_red$Location=="Denmark"]
+cat_metadata_Denmark=cat_metadata_red[cat_metadata_red$Location=="Denmark",]
+adonis(as.dist(Denmark_Phy_q1)~Origin,data = cat_metadata_Denmark)
+Malaysia_Phy_q1=MAG_dis_Phy_q1$L1_UqN[cat_metadata_red$Location=="Malaysia",cat_metadata_red$Location=="Malaysia"]
+cat_metadata_Malaysia=cat_metadata_red[cat_metadata_red$Location=="Malaysia",]
+adonis(as.dist(Malaysia_Phy_q1)~Origin,data = cat_metadata_Malaysia)
+Spain_Phy_q1=MAG_dis_Phy_q1$L1_UqN[cat_metadata_red$Location=="Spain",cat_metadata_red$Location=="Spain"]
+cat_metadata_Spain=cat_metadata_red[cat_metadata_red$Location=="Spain",]
+adonis(as.dist(Spain_Phy_q1)~Origin,data = cat_metadata_Spain)
 
 # Ordination plot by location
 
